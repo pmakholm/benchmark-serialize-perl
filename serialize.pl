@@ -4,6 +4,8 @@
 #   http://idisk.mac.com/christian.hansen/Public/perl/serialize.pl
 # Updated by Peter Makholm, June 2009
 #   http://gist.github.com/130005
+#   - Added Data::Dumper and a current set of YAML/JSON modules
+#   - added tags for the -b option: :core, :yaml, :json
 # see bottom of this script for benchmark results.
 
 use strict;
