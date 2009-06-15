@@ -3,7 +3,7 @@
 # Originaly at: 
 #   http://idisk.mac.com/christian.hansen/Public/perl/serialize.pl
 # Updated by Peter Makholm, June 2009
-#   http://gist.github.com/xxxxxx
+#   http://gist.github.com/130005
 # see bottom of this script for benchmark results.
 
 use strict;
