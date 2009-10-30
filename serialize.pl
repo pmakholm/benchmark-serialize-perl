@@ -70,7 +70,7 @@ my $benchmarks = {
     'RPC::XML' => {
         deflate  => sub { RPC::XML::response->new($_[0])         },
         inflate  => sub { RPC::XML::ParserFactory->new->parse($_[0])    },
-        packages => ['RPC::XML::ParserFactory']
+        packages => ['RPC::XML', 'RPC::XML::ParserFactory']
     },
     'YAML::Old' => {
         deflate  => sub { YAML::Old::Dump($_[0])                 },
@@ -164,19 +164,19 @@ sub doit {
 
     BENCHMARK:
 
-    foreach my $package ( sort keys %benchmark ) {
+    foreach my $name ( sort keys %benchmark ) {
 
-        my $benchmark = $benchmark{$package};
-        my @packages  = ( $package, @{ $benchmark->{packages} || [] } );
+        my $benchmark = $benchmark{$name};
+        my @packages  = ( exists($benchmark->{packages}) ? @{ $benchmark->{packages} } : $name );
 
         $_->require or next BENCHMARK for @packages;
 
-        printf( "%-${width}s : %s\n", $package, $package->VERSION );
+        printf( "%-${width}s : %s\n", $packages[0], $packages[0]->VERSION );
 
-        $results->{deflate}->{$package} = time_deflate( $iterations, $structure, $benchmark )
+        $results->{deflate}->{$name} = time_deflate( $iterations, $structure, $benchmark )
             if $benchmark_deflate;
 
-        $results->{inflate}->{$package} = time_inflate( $iterations, $structure, $benchmark )
+        $results->{inflate}->{$name} = time_inflate( $iterations, $structure, $benchmark )
             if $benchmark_inflate;
     }
 
