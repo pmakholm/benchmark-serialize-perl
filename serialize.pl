@@ -100,8 +100,6 @@ my $iterations         = -1;      # integer
 my $benchmark_deflate  = 1;       # boolean
 my $benchmark_inflate  = 1;       # boolean
 my $output             = 'chart'; # chart or time
-my $width              = 0;
-my $results            = { };
 my $structure          = {
     array  => [ 'a' .. 'j' ],
     hash   => { 'a' .. 'z' },
@@ -145,33 +143,40 @@ Getopt::Long::GetOptions(
 @benchmark = grep { $benchmarks->{ $_ }->{default} } keys %{ $benchmarks }
   unless @benchmark;
 
-$width = width(@benchmark);
+doit($iterations, $structure, @benchmark);
 
-print "\nModules\n";
+sub doit {
+    my ($iterations, $structure, @benchmark) = @_;
 
-BENCHMARK:
+    my $width   = width(@benchmark);
+    my $results = { };
 
-foreach my $package ( sort @benchmark ) {
+    print "\nModules\n";
 
-    my $benchmark = $benchmarks->{$package};
-    my @packages  = ( $package, @{ $benchmark->{packages} || [] } );
+    BENCHMARK:
 
-    $_->require or next BENCHMARK for @packages;
+    foreach my $package ( sort @benchmark ) {
 
-    printf( "%-${width}s : %s\n", $package, $package->VERSION );
+        my $benchmark = $benchmarks->{$package};
+        my @packages  = ( $package, @{ $benchmark->{packages} || [] } );
 
-    $results->{deflate}->{$package} = time_deflate( $iterations, $structure, $benchmark )
-      if $benchmark_deflate;
+        $_->require or next BENCHMARK for @packages;
 
-    $results->{inflate}->{$package} = time_inflate( $iterations, $structure, $benchmark )
-      if $benchmark_inflate;
+        printf( "%-${width}s : %s\n", $package, $package->VERSION );
+
+        $results->{deflate}->{$package} = time_deflate( $iterations, $structure, $benchmark )
+            if $benchmark_deflate;
+
+        $results->{inflate}->{$package} = time_inflate( $iterations, $structure, $benchmark )
+            if $benchmark_inflate;
+    }
+
+    output( 'Deflate', $output, $results->{deflate}, $width )
+        if $benchmark_deflate;
+
+    output( 'Inflate', $output, $results->{inflate}, $width )
+        if $benchmark_inflate;
 }
-
-output( 'Deflate', $output, $results->{deflate} )
-  if $benchmark_deflate;
-
-output( 'Inflate', $output, $results->{inflate} )
-  if $benchmark_inflate;
 
 sub output {
     my $title  = shift;
@@ -187,6 +192,7 @@ sub output_chart {
 
 sub output_time {
     my $results = shift;
+    my $width   = shift;
     foreach my $title ( sort keys %{ $results } ) {
         printf( "%-${width}s %s\n", $title, timestr( $results->{ $title } ) );
     }
