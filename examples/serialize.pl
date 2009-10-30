@@ -3,6 +3,7 @@
 use strict;
 use warnings;
 
+use Getopt::Long;
 use Benchmark::Serialize;
 
 my @benchmark          = ();      # package names of benchmarks to run
