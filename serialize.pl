@@ -108,26 +108,7 @@ my $structure          = {
 
 Getopt::Long::Configure( 'bundling' );
 Getopt::Long::GetOptions(
-    'b|benchmark=s@' => sub {
-        
-        if ( lc $_[1] eq 'all' ) {
-            return @benchmark = keys %{ $benchmarks };
-        }
-        
-        if ( lc $_[1] eq 'default' ) {
-            return @benchmark = grep { $benchmarks->{ $_ }->{default} } keys %{ $benchmarks };
-        }
-
-        if ( $_[1] =~ /^:(.*)/ ) {
-            return @benchmark = grep { $benchmarks->{ $_ }->{$1} } keys %{ $benchmarks };
-        }
-        
-        if ( exists $benchmarks->{ $_[1] } ) {
-            return push( @benchmark, $_[1] );
-        }
-
-        die "Unknown benchmark '$_[1]'.\n";
-    },
+    'b|benchmark=s@' => \@benchmark,
     'deflate!'       => \$benchmark_deflate,
     'inflate!'       => \$benchmark_inflate,
     'i|iterations=i' => \$iterations,
@@ -146,18 +127,40 @@ Getopt::Long::GetOptions(
 doit($iterations, $structure, @benchmark);
 
 sub doit {
-    my ($iterations, $structure, @benchmark) = @_;
+    my $iterations = shift;
+    my $structure  = shift;
+    my %benchmark;
+    for my $spec (@_) {
+        if ( ref $spec eq "HASH" ) {
+            $benchmark{ $spec->{name} } = $spec; 
 
-    my $width   = width(@benchmark);
+        } elsif ( $spec eq "all" ) {
+            $benchmark { $_ } = $benchmarks->{ $_ } for keys %{ $benchmarks };
+        
+        } elsif ( $spec eq "default" ) {
+            $benchmark{ $_ } = $benchmarks->{ $_ } for grep { $benchmarks->{ $_ }->{default} } keys %{ $benchmarks };
+        
+        } elsif ( $spec =~ /^:(.*)/ ) {
+            $benchmark{ $_ } = $benchmarks->{ $_ } for grep { $benchmarks->{ $_ }->{$1} } keys %{ $benchmarks };
+        
+        } elsif ( exists $benchmarks->{ $spec } ) {
+            $benchmark{ $spec } = $benchmarks->{ $spec }
+        
+        } else {
+            warn "Unknown benchmark '$spec'.";
+        }
+    }
+
+    my $width   = width(keys %benchmark);
     my $results = { };
 
     print "\nModules\n";
 
     BENCHMARK:
 
-    foreach my $package ( sort @benchmark ) {
+    foreach my $package ( sort keys %benchmark ) {
 
-        my $benchmark = $benchmarks->{$package};
+        my $benchmark = $benchmark{$package};
         my @packages  = ( $package, @{ $benchmark->{packages} || [] } );
 
         $_->require or next BENCHMARK for @packages;
