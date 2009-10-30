@@ -1,5 +1,7 @@
 #!/usr/bin/perl
 
+package Benchmark::Serialize;
+
 # Originaly at: 
 #   http://idisk.mac.com/christian.hansen/Public/perl/serialize.pl
 # Updated by Peter Makholm, June 2009
@@ -95,36 +97,40 @@ my $benchmarks = {
     }
 };
 
-my @benchmark          = ();      # package names of benchmarks to run
-my $iterations         = -1;      # integer
-my $benchmark_deflate  = 1;       # boolean
-my $benchmark_inflate  = 1;       # boolean
-my $output             = 'chart'; # chart or time
-my $structure          = {
-    array  => [ 'a' .. 'j' ],
-    hash   => { 'a' .. 'z' },
-    string => 'x' x 200
-};
+our $benchmark_deflate  = 1;       # boolean
+our $benchmark_inflate  = 1;       # boolean
+our $output             = 'chart'; # chart or time
 
-Getopt::Long::Configure( 'bundling' );
-Getopt::Long::GetOptions(
-    'b|benchmark=s@' => \@benchmark,
-    'deflate!'       => \$benchmark_deflate,
-    'inflate!'       => \$benchmark_inflate,
-    'i|iterations=i' => \$iterations,
-    'o|output=s'     => \$output,
-    's|structure=s'  => sub {
-        die "Structure option requires YAML.\n"
-           unless YAML->require;
 
-        $structure = YAML::LoadFile( $_[1] );
-    }
-) or exit 1;
+unless( caller() ) {
+    my @benchmark          = ();      # package names of benchmarks to run
+    my $iterations         = -1;      # integer
+    my $structure          = {
+        array  => [ 'a' .. 'j' ],
+        hash   => { 'a' .. 'z' },
+        string => 'x' x 200
+    };
 
-@benchmark = grep { $benchmarks->{ $_ }->{default} } keys %{ $benchmarks }
-  unless @benchmark;
+    Getopt::Long::Configure( 'bundling' );
+    Getopt::Long::GetOptions(
+        'b|benchmark=s@' => \@benchmark,
+        'deflate!'       => \$benchmark_deflate,
+        'inflate!'       => \$benchmark_inflate,
+        'i|iterations=i' => \$iterations,
+        'o|output=s'     => \$output,
+        's|structure=s'  => sub {
+            die "Structure option requires YAML.\n"
+            unless YAML->require;
 
-doit($iterations, $structure, @benchmark);
+            $structure = YAML::LoadFile( $_[1] );
+        }
+    ) or exit 1;
+
+    @benchmark = grep { $benchmarks->{ $_ }->{default} } keys %{ $benchmarks }
+    unless @benchmark;
+
+    doit($iterations, $structure, @benchmark);
+}
 
 sub doit {
     my $iterations = shift;
