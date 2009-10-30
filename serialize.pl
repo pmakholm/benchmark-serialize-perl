@@ -99,6 +99,7 @@ my $benchmarks = {
 
 our $benchmark_deflate  = 1;       # boolean
 our $benchmark_inflate  = 1;       # boolean
+our $benchmark_size     = 1;       # boolean
 our $output             = 'chart'; # chart or time
 
 unless( caller() ) {
@@ -177,7 +178,12 @@ sub cmpthese {
 
         $results->{inflate}->{$name} = time_inflate( $iterations, $structure, $benchmark )
             if $benchmark_inflate;
+
+        $results->{size}->{$name}    = length( $benchmark->{deflate}->($structure) );
     }
+
+    output( 'Sizes', "size", $results->{size}, $width )
+        if $benchmark_size;
 
     output( 'Deflate', $output, $results->{deflate}, $width )
         if $benchmark_deflate;
@@ -190,7 +196,9 @@ sub output {
     my $title  = shift;
     my $output = shift;
     printf( "\n%s\n", $title );
-    return ( $output eq 'time' ) ? &output_time : &output_chart;
+    return ( $output eq 'size' ) ? &output_size
+         : ( $output eq 'time' ) ? &output_time 
+         :                         &output_chart;
 }
 
 sub output_chart {
@@ -203,6 +211,14 @@ sub output_time {
     my $width   = shift;
     foreach my $title ( sort keys %{ $results } ) {
         printf( "%-${width}s %s\n", $title, timestr( $results->{ $title } ) );
+    }
+}
+
+sub output_size {
+    my $results = shift;
+    my $width   = shift;
+    foreach my $title ( sort keys %{ $results } ) {
+        printf( "%-${width}s : %d bytes\n", $title, $results->{ $title } );
     }
 }
 
