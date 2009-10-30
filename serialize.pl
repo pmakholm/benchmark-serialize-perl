@@ -13,7 +13,7 @@ package Benchmark::Serialize;
 use strict;
 use warnings;
 
-use Benchmark          qw[cmpthese timethis timestr];
+use Benchmark          qw[timestr];
 use Getopt::Long       qw[];
 use UNIVERSAL::require qw[];
 
@@ -101,7 +101,6 @@ our $benchmark_deflate  = 1;       # boolean
 our $benchmark_inflate  = 1;       # boolean
 our $output             = 'chart'; # chart or time
 
-
 unless( caller() ) {
     my @benchmark          = ();      # package names of benchmarks to run
     my $iterations         = -1;      # integer
@@ -129,10 +128,10 @@ unless( caller() ) {
     @benchmark = grep { $benchmarks->{ $_ }->{default} } keys %{ $benchmarks }
     unless @benchmark;
 
-    doit($iterations, $structure, @benchmark);
+    cmpthese($iterations, $structure, @benchmark);
 }
 
-sub doit {
+sub cmpthese {
     my $iterations = shift;
     my $structure  = shift;
     my %benchmark;
@@ -196,7 +195,7 @@ sub output {
 
 sub output_chart {
     my $results = shift;
-    cmpthese($results);
+    Benchmark::cmpthese($results);
 }
 
 sub output_time {
@@ -210,14 +209,14 @@ sub output_time {
 sub time_deflate {
     my ( $iterations, $structure, $benchmark ) = @_;
     my $deflate = $benchmark->{deflate};
-    return timethis( $iterations, sub { &$deflate($structure) }, '', 'none' );
+    return Benchmark::timethis( $iterations, sub { &$deflate($structure) }, '', 'none' );
 }
 
 sub time_inflate {
     my ( $iterations, $structure, $benchmark ) = @_;
     my $inflate = $benchmark->{inflate};
     my $deflated = $benchmark->{deflate}->($structure);
-    return timethis( $iterations, sub { &$inflate($deflated)  }, '', 'none' );
+    return Benchmark::timethis( $iterations, sub { &$inflate($deflated)  }, '', 'none' );
 }
 
 sub width {
