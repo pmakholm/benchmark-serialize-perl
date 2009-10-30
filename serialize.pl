@@ -69,8 +69,8 @@ my $benchmarks = {
     },
     'RPC::XML' => {
         deflate  => sub { RPC::XML::response->new($_[0])         },
-        inflate  => sub { RPC::XML::Parser->new->parse($_[0])    },
-        packages => ['RPC::XML::Parser']
+        inflate  => sub { RPC::XML::ParserFactory->new->parse($_[0])    },
+        packages => ['RPC::XML::ParserFactory']
     },
     'YAML::Old' => {
         deflate  => sub { YAML::Old::Dump($_[0])                 },
