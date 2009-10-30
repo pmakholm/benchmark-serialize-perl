@@ -1,5 +1,3 @@
-#!/usr/bin/perl
-
 package Benchmark::Serialize;
 
 # Originaly at: 
@@ -13,8 +11,82 @@ package Benchmark::Serialize;
 use strict;
 use warnings;
 
+=head1 NAME
+
+Benchmark::Serialize - Benchmarks of serialization modules
+
+=head1 VERSION
+
+Version 0.01
+
+=cut
+
+our $VERSION = '0.01';
+
+=head1 SYNOPSIS
+
+    use Benchmark::Serialise qw(cmpthese);
+
+    my $structure = {
+        array  => [ 'a' .. 'j' ],
+        hash   => { 'a' .. 'z' ]
+        string => 'x' x 200,
+    };
+
+    cmpthese( -5, $structure, qw(:core :json :yaml) );
+
+=head1 DESCRIPTION
+
+This module encapsulates some basic benchmarks to help you choose a module
+for serializing data. Note that using this module is only a part of chosing a
+serialization format. Other factors than the benchmarked might be of
+relevance!
+
+=head2 Functions
+
+This module provides the following functions
+
+=over 5
+
+=item cmpthese(COUNT, STRUCTURE, BENCHMARKS ...)
+
+Benchmark COUNT interations of a list of modules. A benchmark is either a name
+of a supported module, a tag, or a hash ref containing at least an inflate, a
+deflate, and a name attribute:
+
+  {
+      name    => 'JSON::XS',
+      deflate => sub { JSON::XS::encode_json($_[0]) }
+      inflate => inflate  => sub { JSON::XS::decode_json($_[0]) }
+  }
+
+By default Benchmark::Serialize will try to use the name attribute as a module
+to be loaded. This can be overridden by having a packages attribute with an
+arrayref containing modules to be loaded.
+
+=back
+
+=head2 Benchmark tags
+
+The following tags are supported
+
+=over 5
+
+=item :all     - All modules with premade benchmarks 
+
+=item :default - A default set of serialization modules
+
+=item :core    - Serialization modules included in core
+
+=item :json    - JSON modules
+
+=item :yaml    - YAML modules
+
+=back
+
+=cut
+
 use Benchmark          qw[timestr];
-use Getopt::Long       qw[];
 use UNIVERSAL::require qw[];
 
 my $benchmarks = {
@@ -110,7 +182,7 @@ sub cmpthese {
         if ( ref $spec eq "HASH" ) {
             $benchmark{ $spec->{name} } = $spec; 
 
-        } elsif ( $spec eq "all" ) {
+        } elsif ( $spec eq "all" or $spec eq ":all" ) {
             $benchmark { $_ } = $benchmarks->{ $_ } for keys %{ $benchmarks };
         
         } elsif ( $spec eq "default" ) {
@@ -208,6 +280,38 @@ sub time_inflate {
 sub width {
     return length( ( sort { length $a <=> length $b } @_ )[-1] );
 }
+
+=head1 AUTHOR
+
+Peter Makholm, C<< <peter at makholm.net> >>
+
+=head1 BUGS
+
+Please report any bugs or feature requests to C<bug-benchmark-serialize at
+rt.cpan.org>, or through
+the web interface at
+L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Benchmark-Serialize>.  I will
+be notified, and then you'll
+automatically be notified of progress on your bug as I make changes.
+
+=head1 ACKNOWLEDGEMENTS
+
+This module started out as a script written by Christian Hansen, see 
+http://idisk.mac.com/christian.hansen/Public/perl/serialize.pl
+
+=head1 COPYRIGHT & LICENSE
+
+Copyright 2009 Peter Makholm.
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of either: the GNU General Public License as published
+by the Free Software Foundation; or the Artistic License.
+
+See http://dev.perl.org/licenses/ for more information.
+
+
+=cut
+
 
 __DATA__
 Modules
