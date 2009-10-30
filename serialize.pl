@@ -158,15 +158,12 @@ foreach my $package ( sort @benchmark ) {
 
     $_->require or next BENCHMARK for @packages;
 
-    my $deflate  = $benchmark->{deflate};
-    my $inflate  = $benchmark->{inflate};
-
     printf( "%-${width}s : %s\n", $package, $package->VERSION );
 
-    $results->{deflate}->{$package} = time_deflate( $deflate, $inflate )
+    $results->{deflate}->{$package} = time_deflate( $iterations, $structure, $benchmark )
       if $benchmark_deflate;
 
-    $results->{inflate}->{$package} = time_inflate( $deflate, $inflate )
+    $results->{inflate}->{$package} = time_inflate( $iterations, $structure, $benchmark )
       if $benchmark_inflate;
 }
 
@@ -196,13 +193,15 @@ sub output_time {
 }
 
 sub time_deflate {
-    my ( $deflate, $inflate ) = @_;
+    my ( $iterations, $structure, $benchmark ) = @_;
+    my $deflate = $benchmark->{deflate};
     return timethis( $iterations, sub { &$deflate($structure) }, '', 'none' );
 }
 
 sub time_inflate {
-    my ( $deflate, $inflate ) = @_;
-    my $deflated = &$deflate($structure);
+    my ( $iterations, $structure, $benchmark ) = @_;
+    my $inflate = $benchmark->{inflate};
+    my $deflated = $benchmark->{deflate}->($structure);
     return timethis( $iterations, sub { &$inflate($deflated)  }, '', 'none' );
 }
 
