@@ -1,0 +1,10 @@
+Changes for Benchmark::Serialize
+
+June 15, 2009
+    - Available at http://gist.github.com/130005
+    - Added Data::Dumper and a current set of YAML/JSON modules
+    - Added Data::Dumper and a current set of YAML/JSON modules
+
+Original
+    - Available at
+      http://idisk.mac.com/christian.hansen/Public/perl/serialize.pl
