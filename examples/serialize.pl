@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Getopt::Long;
-use Benchmark::Serialize;
+use Benchmark::Serialize qw( cmpthese );
 
 my @benchmark          = ();      # package names of benchmarks to run
 my $iterations         = -1;      # integer
@@ -31,5 +31,5 @@ Getopt::Long::GetOptions(
 
 @benchmark = ("all") unless @benchmark;
 
-Benchmark::Serialize::cmpthese($iterations, $structure, @benchmark);
+cmpthese($iterations, $structure, @benchmark);
 

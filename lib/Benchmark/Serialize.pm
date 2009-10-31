@@ -89,6 +89,10 @@ The following tags are supported
 use Benchmark          qw[timestr];
 use UNIVERSAL::require qw[];
 
+use Exporter qw(import);
+our @EXPORT_OK   = qw( cmpthese );
+our %EXPORT_TAGS = ( all => \@EXPORT_OK );
+
 my $benchmarks = {
     'Bencode' => {
         deflate  => sub { Bencode::bencode($_[0])                },
