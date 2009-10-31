@@ -12,7 +12,14 @@ WriteMakefile(
       : ()),
     PL_FILES            => {},
     PREREQ_PM => {
+	'UNIVERSAL::require' => 0,
         'Test::More' => 0,
+    },
+    META_MERGE          => {
+        resources => {
+            repository => 'http://github.com/pmakholm/benchmark-serialize-perl',
+            license    => 'http://dev.perl.org/licenses/',
+        },
     },
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean               => { FILES => 'Benchmark-Serialize-*' },
