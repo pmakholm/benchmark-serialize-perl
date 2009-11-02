@@ -17,11 +17,11 @@ our $VERSION = '0.01';
 
 =head1 SYNOPSIS
 
-    use Benchmark::Serialise qw(cmpthese);
+    use Benchmark::Serialize qw(cmpthese);
 
     my $structure = {
         array  => [ 'a' .. 'j' ],
-        hash   => { 'a' .. 'z' ]
+        hash   => { 'a' .. 'z' },
         string => 'x' x 200,
     };
 
