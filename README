@@ -1,0 +1,118 @@
+NAME
+    Benchmark::Serialize - Benchmarks of serialization modules
+
+SYNOPSIS
+        use Benchmark::Serialise qw(cmpthese);
+
+        my $structure = {
+            array  => [ 'a' .. 'j' ],
+            hash   => { 'a' .. 'z' ]
+            string => 'x' x 200,
+        };
+
+        cmpthese( -5, $structure, qw(:core :json :yaml) );
+
+DESCRIPTION
+    This module encapsulates some basic benchmarks to help you choose a
+    module for serializing data. Note that using this module is only a part
+    of chosing a serialization format. Other factors than the benchmarked
+    might be of relevance!
+
+    See the in-module documentation for more information.
+
+RESULTS
+
+  Modules
+  Bencode             : 1.31
+  Convert::Bencode    : 1.03
+  Convert::Bencode_XS : 0.06
+  Data::Dumper        : 2.125
+  Data::Taxi          : 0.95
+  FreezeThaw          : 0.45
+  JSON::PP            : 2.26000
+  JSON::XS            : 2.26
+  PHP::Serialization  : 0.33
+  RPC::XML            : 1.44
+  Storable            : 2.21
+  XML::Simple         : 2.18
+  YAML::Old           : 0.81
+  YAML::Tiny          : 1.40
+  YAML::XS            : 0.32
+  
+  Sizes
+                      bytes Bencode Convert::Bencode Convert::Bencode_XS YAML::XS JSON::XS JSON::PP YAML::Old YAML::Tiny Storable FreezeThaw XML::Simple PHP::Serialization Data::Taxi Data::Dumper RPC::XML
+  Bencode               339      --               0%                  0%      -5%     -10%     -10%      -10%       -11%     -11%       -13%        -32%               -43%       -67%         -68%     -80%
+  Convert::Bencode      339      0%               --                  0%      -5%     -10%     -10%      -10%       -11%     -11%       -13%        -32%               -43%       -67%         -68%     -80%
+  Convert::Bencode_XS   339      0%               0%                  --      -5%     -10%     -10%      -10%       -11%     -11%       -13%        -32%               -43%       -67%         -68%     -80%
+  YAML::XS              357      5%               5%                  5%       --      -5%      -5%       -5%        -6%      -7%        -9%        -29%               -40%       -65%         -66%     -79%
+  JSON::XS              376     11%              11%                 11%       5%       --       0%       -0%        -1%      -2%        -4%        -25%               -37%       -63%         -64%     -78%
+  JSON::PP              376     11%              11%                 11%       5%       0%       --       -0%        -1%      -2%        -4%        -25%               -37%       -63%         -64%     -78%
+  YAML::Old             377     11%              11%                 11%       6%       0%       0%        --        -1%      -1%        -4%        -25%               -36%       -63%         -64%     -78%
+  YAML::Tiny            379     12%              12%                 12%       6%       1%       1%        1%         --      -1%        -3%        -25%               -36%       -63%         -64%     -78%
+  Storable              382     13%              13%                 13%       7%       2%       2%        1%         1%       --        -2%        -24%               -36%       -63%         -64%     -78%
+  FreezeThaw            391     15%              15%                 15%      10%       4%       4%        4%         3%       2%         --        -22%               -34%       -62%         -63%     -77%
+  XML::Simple           502     48%              48%                 48%      41%      34%      34%       33%        32%      31%        28%          --               -15%       -51%         -53%     -71%
+  PHP::Serialization    593     75%              75%                 75%      66%      58%      58%       57%        56%      55%        52%         18%                 --       -42%         -44%     -65%
+  Data::Taxi           1028    203%             203%                203%     188%     173%     173%      173%       171%     169%       163%        105%                73%         --          -3%     -40%
+  Data::Dumper         1058    212%             212%                212%     196%     181%     181%      181%       179%     177%       171%        111%                78%         3%           --     -38%
+  RPC::XML             1712    405%             405%                405%     380%     355%     355%      354%       352%     348%       338%        241%               189%        67%          62%       --
+  
+  Deflate
+                          Rate YAML::Old RPC::XML Data::Taxi PHP::Serialization XML::Simple JSON::PP YAML::Tiny Bencode Convert::Bencode Data::Dumper FreezeThaw YAML::XS Storable Convert::Bencode_XS JSON::XS
+  YAML::Old              241/s        --     -85%       -87%               -90%        -91%     -92%       -94%    -97%             -97%         -97%       -98%     -98%     -99%                -99%    -100%
+  RPC::XML              1643/s      581%       --       -11%               -33%        -42%     -47%       -62%    -79%             -81%         -82%       -84%     -87%     -94%                -96%     -99%
+  Data::Taxi            1845/s      665%      12%         --               -24%        -35%     -41%       -57%    -77%             -79%         -80%       -82%     -85%     -94%                -96%     -99%
+  PHP::Serialization    2443/s      913%      49%        32%                 --        -13%     -22%       -43%    -69%             -72%         -74%       -76%     -81%     -91%                -94%     -99%
+  XML::Simple           2823/s     1071%      72%        53%                16%          --      -9%       -34%    -64%             -68%         -70%       -72%     -78%     -90%                -93%     -98%
+  JSON::PP              3116/s     1192%      90%        69%                28%         10%       --       -27%    -60%             -65%         -67%       -69%     -75%     -89%                -93%     -98%
+  YAML::Tiny            4287/s     1678%     161%       132%                75%         52%      38%         --    -45%             -51%         -54%       -57%     -66%     -85%                -90%     -98%
+  Bencode               7860/s     3160%     378%       326%               222%        178%     152%        83%      --             -11%         -16%       -22%     -37%     -73%                -82%     -96%
+  Convert::Bencode      8805/s     3552%     436%       377%               260%        212%     183%       105%     12%               --          -5%       -12%     -30%     -69%                -79%     -95%
+  Data::Dumper          9309/s     3761%     467%       404%               281%        230%     199%       117%     18%               6%           --        -7%     -26%     -68%                -78%     -95%
+  FreezeThaw           10048/s     4067%     511%       445%               311%        256%     222%       134%     28%              14%           8%         --     -20%     -65%                -76%     -94%
+  YAML::XS             12560/s     5109%     664%       581%               414%        345%     303%       193%     60%              43%          35%        25%       --     -56%                -71%     -93%
+  Storable             28671/s    11791%    1645%      1454%              1074%        916%     820%       569%    265%             226%         208%       185%     128%       --                -33%     -84%
+  Convert::Bencode_XS  42708/s    17612%    2499%      2215%              1648%       1413%    1271%       896%    443%             385%         359%       325%     240%      49%                  --     -76%
+  JSON::XS            177750/s    73618%   10718%      9533%              7177%       6196%    5605%      4046%   2162%            1919%        1810%      1669%    1315%     520%                316%       --
+  
+  Inflate
+                         Rate YAML::Old XML::Simple PHP::Serialization RPC::XML Data::Taxi JSON::PP YAML::Tiny Convert::Bencode FreezeThaw Bencode Data::Dumper YAML::XS Convert::Bencode_XS Storable JSON::XS
+  YAML::Old             192/s        --        -45%               -51%     -60%       -78%     -83%       -89%             -91%       -93%    -95%         -98%     -99%               -100%    -100%    -100%
+  XML::Simple           350/s       82%          --               -12%     -28%       -60%     -70%       -80%             -84%       -87%    -90%         -97%     -98%                -99%     -99%    -100%
+  PHP::Serialization    395/s      106%         13%                 --     -18%       -54%     -66%       -78%             -82%       -85%    -89%         -96%     -97%                -99%     -99%    -100%
+  RPC::XML              482/s      152%         38%                22%       --       -44%     -58%       -73%             -78%       -82%    -87%         -96%     -97%                -99%     -99%     -99%
+  Data::Taxi            865/s      351%        147%               119%      79%         --     -25%       -51%             -61%       -67%    -76%         -92%     -94%                -98%     -99%     -99%
+  JSON::PP             1152/s      501%        230%               191%     139%        33%       --       -35%             -48%       -56%    -68%         -89%     -92%                -98%     -98%     -99%
+  YAML::Tiny           1777/s      827%        408%               350%     268%       105%      54%         --             -19%       -32%    -51%         -84%     -88%                -96%     -97%     -98%
+  Convert::Bencode     2201/s     1048%        530%               457%     356%       154%      91%        24%               --       -16%    -39%         -80%     -85%                -96%     -97%     -97%
+  FreezeThaw           2619/s     1266%        649%               563%     443%       203%     127%        47%              19%         --    -28%         -76%     -83%                -95%     -96%     -97%
+  Bencode              3622/s     1789%        936%               816%     651%       319%     214%       104%              65%        38%      --         -67%     -76%                -93%     -94%     -96%
+  Data::Dumper        10960/s     5616%       3035%              2673%    2173%      1167%     851%       517%             398%       318%    203%           --     -27%                -78%     -83%     -87%
+  YAML::XS            15037/s     7742%       4202%              3704%    3018%      1639%    1205%       746%             583%       474%    315%          37%       --                -70%     -77%     -82%
+  Convert::Bencode_XS 49321/s    25622%      14010%             12377%   10127%      5603%    4182%      2676%            2141%      1783%   1262%         350%     228%                  --     -25%     -41%
+  Storable            65511/s    34066%      18641%             16473%   13485%      7475%    5587%      3587%            2877%      2401%   1709%         498%     336%                 33%       --     -22%
+  JSON::XS            83510/s    43453%      23790%             21027%   17217%      9556%    7150%      4600%            3694%      3088%   2206%         662%     455%                 69%      27%       --
+  
+AUTHOR
+    Peter Makholm, "<peter at makholm.net>"
+
+BUGS
+    Please report any bugs or feature requests to "bug-benchmark-serialize
+    at rt.cpan.org", or through the web interface at
+    <http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Benchmark-Serialize>. I
+    will be notified, and then you'll automatically be notified of progress
+    on your bug as I make changes.
+
+ACKNOWLEDGEMENTS
+    This module started out as a script written by Christian Hansen, see
+    http://idisk.mac.com/christian.hansen/Public/perl/serialize.pl
+
+COPYRIGHT & LICENSE
+    Copyright 2009 Peter Makholm.
+
+    This program is free software; you can redistribute it and/or modify it
+    under the terms of either: the GNU General Public License as published
+    by the Free Software Foundation; or the Artistic License.
+
+    See http://dev.perl.org/licenses/ for more information.
+
