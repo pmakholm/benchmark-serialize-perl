@@ -176,7 +176,7 @@ my $benchmarks = {
 our $benchmark_deflate  = 1;       # boolean
 our $benchmark_inflate  = 1;       # boolean
 our $benchmark_size     = 1;       # boolean
-our $output             = 'chart'; # chart or time
+our $output             = 'chart'; # chart or list
 
 sub cmpthese {
     my $iterations = shift;
@@ -219,40 +219,46 @@ sub cmpthese {
 
         printf( "%-${width}s : %s\n", $packages[0], $packages[0]->VERSION );
 
-        $results->{deflate}->{$name} = time_deflate( $iterations, $structure, $benchmark )
+        $results->{deflate}->{$name} = timeit_deflate( $iterations, $structure, $benchmark )
             if $benchmark_deflate;
 
-        $results->{inflate}->{$name} = time_inflate( $iterations, $structure, $benchmark )
+        $results->{inflate}->{$name} = timeit_inflate( $iterations, $structure, $benchmark )
             if $benchmark_inflate;
 
         $results->{size}->{$name}    = length( $benchmark->{deflate}->($structure) );
     }
 
-    output( 'Sizes', "size", $results->{size}, $width )
+    output( 'Sizes', "size", $output, $results->{size}, $width )
         if $benchmark_size;
 
-    output( 'Deflate', $output, $results->{deflate}, $width )
+    output( 'Deflate', "time", $output, $results->{deflate}, $width )
         if $benchmark_deflate;
 
-    output( 'Inflate', $output, $results->{inflate}, $width )
+    output( 'Inflate', "time", $output, $results->{inflate}, $width )
         if $benchmark_inflate;
 }
 
 sub output {
     my $title  = shift;
+    my $type   = shift;
     my $output = shift;
     printf( "\n%s\n", $title );
-    return ( $output eq 'size' ) ? &output_size_chart
-         : ( $output eq 'time' ) ? &output_time 
-         :                         &output_chart;
+    if ( $type eq "size" ) {
+        ($output eq "list") ? &size_list : &size_chart ; 
+    } elsif ( $type eq "time" ) {
+        ($output eq "list") ? &time_list : &time_chart ; 
+
+    } else {
+        warn("Unknown data type: $type");
+    }
 }
 
-sub output_chart {
+sub time_chart {
     my $results = shift;
     Benchmark::cmpthese($results);
 }
 
-sub output_time {
+sub time_list {
     my $results = shift;
     my $width   = shift;
     foreach my $title ( sort keys %{ $results } ) {
@@ -260,7 +266,7 @@ sub output_time {
     }
 }
 
-sub output_size_chart {
+sub size_chart {
     my $results = shift;
     my @vals    = sort { $a->[1] <=> $b->[1] } map { [ $_, $results->{$_} ] } keys %$results;
 
@@ -329,7 +335,7 @@ sub output_size_chart {
     }
 }
 
-sub output_size {
+sub size_list {
     my $results = shift;
     my $width   = shift;
     foreach my $title ( sort keys %{ $results } ) {
@@ -337,13 +343,13 @@ sub output_size {
     }
 }
 
-sub time_deflate {
+sub timeit_deflate {
     my ( $iterations, $structure, $benchmark ) = @_;
     my $deflate = $benchmark->{deflate};
     return Benchmark::timethis( $iterations, sub { &$deflate($structure) }, '', 'none' );
 }
 
-sub time_inflate {
+sub timeit_inflate {
     my ( $iterations, $structure, $benchmark ) = @_;
     my $inflate = $benchmark->{inflate};
     my $deflated = $benchmark->{deflate}->($structure);
