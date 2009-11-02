@@ -3,5 +3,6 @@ ignore.txt
 lib/Benchmark/Serialize.pm
 Makefile.PL
 MANIFEST			This list of files
+README
 t/00-load.t
 t/pod.t
