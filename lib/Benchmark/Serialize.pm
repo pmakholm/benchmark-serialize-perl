@@ -242,7 +242,7 @@ sub output {
     my $title  = shift;
     my $output = shift;
     printf( "\n%s\n", $title );
-    return ( $output eq 'size' ) ? &output_size
+    return ( $output eq 'size' ) ? &output_size_chart
          : ( $output eq 'time' ) ? &output_time 
          :                         &output_chart;
 }
@@ -257,6 +257,75 @@ sub output_time {
     my $width   = shift;
     foreach my $title ( sort keys %{ $results } ) {
         printf( "%-${width}s %s\n", $title, timestr( $results->{ $title } ) );
+    }
+}
+
+sub output_size_chart {
+    my $results = shift;
+    my @vals    = sort { $a->[1] <=> $b->[1] } map { [ $_, $results->{$_} ] } keys %$results;
+
+    my @rows    = ( [
+        '',
+        'bytes',
+        map { $_->[0] } @vals,
+    ] );
+
+    my @col_width = map { length ( $_ ) } @{ $rows[0] };
+
+    for my $row_val ( @vals ) {
+        my @row;
+
+        push @row, $row_val->[0], $row_val->[1];
+        $col_width[0] = ( length ( $row_val->[0] ) > $col_width[0] ? length( $row_val->[0] ) : $col_width[0] );
+        $col_width[1] = ( length ( $row_val->[1] ) > $col_width[1] ? length( $row_val->[1] ) : $col_width[1] );
+
+        # Columns 2..N = performance ratios
+        for my $col_num ( 0 .. $#vals ) {
+            my $col_val = $vals[$col_num];
+            my $out;
+
+            if ( $col_val->[0] eq $row_val->[0] ) {
+                $out = "--";
+            } else {
+                $out = sprintf( "%.0f%%", 100*$row_val->[1]/$col_val->[1] - 100 );
+            }
+
+            push @row, $out;
+            $col_width[$col_num+2] = ( length ( $out ) > $col_width[$col_num+2] ? length ( $out ) : $col_width[$col_num+2]);
+        }
+        push @rows, \@row;
+    }
+
+    # Pasted from Benchmark.pm
+    # Equalize column widths in the chart as much as possible without
+    # exceeding 80 characters.  This does not use or affect cols 0 or 1.
+    my @sorted_width_refs = 
+       sort { $$a <=> $$b } map { \$_ } @col_width[2..$#col_width];
+    my $max_width = ${$sorted_width_refs[-1]};
+
+    my $total = @col_width - 1 ;
+    for ( @col_width ) { $total += $_ }
+
+    STRETCHER:
+    while ( $total < 80 ) {
+        my $min_width = ${$sorted_width_refs[0]};
+        last
+           if $min_width == $max_width;
+        for ( @sorted_width_refs ) {
+            last 
+                if $$_ > $min_width;
+            ++$$_;
+            ++$total;
+            last STRETCHER
+                if $total >= 80;
+        }
+    }
+
+    # Dump the output
+    my $format = join( ' ', map { "%${_}s" } @col_width ) . "\n";
+    substr( $format, 1, 0 ) = '-';
+    for ( @rows ) {
+        printf $format, @$_;
     }
 }
 
