@@ -1,5 +1,11 @@
 Changes for Benchmark::Serialize
 
+0.02 - Mon Nov  2 09:58:15 2009
+	Added comparison chart of sizes
+	Export cmpthese (RT #50997)
+	Fixed documentation errors (RT #50996)
+	Fixed dependencies (RT #50998)
+
 0.01 - Fri Oct 30 12:15:33 2009
 	Refactored into a Perl Module
 
