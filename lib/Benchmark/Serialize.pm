@@ -135,6 +135,10 @@ my $benchmarks = {
         deflate  => sub { PHP::Serialization::serialize($_[0])   },
         inflate  => sub { PHP::Serialization::unserialize($_[0]) }
     },
+    'PHP::Serialization::XS' => {
+        deflate  => sub { PHP::Serialization::XS::serialize($_[0])   },
+        inflate  => sub { PHP::Serialization::XS::unserialize($_[0]) }
+    },
     'RPC::XML' => {
         deflate  => sub { RPC::XML::response->new($_[0])->as_string         },
         inflate  => sub { RPC::XML::ParserFactory->new->parse($_[0])->value },
