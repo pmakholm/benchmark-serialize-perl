@@ -170,7 +170,11 @@ my $benchmarks = {
         deflate  => sub { XML::Simple::XMLout($_[0])             },
         inflate  => sub { XML::Simple::XMLin($_[0])              },
         default  => 1
-    }
+    },
+    'XML::TreePP' => {
+        deflate => sub { XML::TreePP->new()->write( $_[0] )      },
+        inflate => sub { XML::TreePP->new()->parse( $_[0] )      },
+    },
 };
 
 our $benchmark_deflate  = 1;       # boolean
