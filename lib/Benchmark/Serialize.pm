@@ -98,6 +98,10 @@ my $benchmarks = {
         deflate  => sub { Convert::Bencode_XS::bencode($_[0])    },
         inflate  => sub { Convert::Bencode_XS::bdecode($_[0])    }
     },
+    'Data::asXML' => {
+        deflate  => sub { Data::asXML->new(pretty=>0)->encode($_[0])->toString },
+        inflate  => sub { Data::asXML->new(pretty=>0)->decode($_[0]) },
+    },
     'Data::Dumper' => {
         deflate  => sub { Data::Dumper->Dump([ $_[0] ])          },
         inflate  => sub { my $VAR1; eval $_[0]                   },
