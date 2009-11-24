@@ -74,6 +74,8 @@ The following tags are supported
 
 =item :yaml    - YAML modules
 
+=item :xml     - XML formats
+
 =back
 
 =cut
@@ -101,6 +103,7 @@ my $benchmarks = {
     'Data::asXML' => {
         deflate  => sub { Data::asXML->new(pretty=>0)->encode($_[0])->toString },
         inflate  => sub { Data::asXML->new(pretty=>0)->decode($_[0]) },
+        xml      => 1,
     },
     'Data::Dumper' => {
         deflate  => sub { Data::Dumper->Dump([ $_[0] ])          },
@@ -111,6 +114,7 @@ my $benchmarks = {
     'Data::Taxi' => {
         deflate  => sub { Data::Taxi::freeze($_[0])              },
         inflate  => sub { Data::Taxi::thaw($_[0])                },
+        xml      => 1,
     },
     'FreezeThaw' => {
         deflate  => sub { FreezeThaw::freeze($_[0])              },
@@ -146,7 +150,8 @@ my $benchmarks = {
     'RPC::XML' => {
         deflate  => sub { RPC::XML::response->new($_[0])->as_string         },
         inflate  => sub { RPC::XML::ParserFactory->new->parse($_[0])->value },
-        packages => ['RPC::XML', 'RPC::XML::ParserFactory']
+        packages => ['RPC::XML', 'RPC::XML::ParserFactory'],
+        xml      => 1,
     },
     'YAML::Old' => {
         deflate  => sub { YAML::Old::Dump($_[0])                 },
@@ -169,11 +174,13 @@ my $benchmarks = {
     'XML::Simple' => {
         deflate  => sub { XML::Simple::XMLout($_[0])             },
         inflate  => sub { XML::Simple::XMLin($_[0])              },
-        default  => 1
+        default  => 1,
+        xml      => 1,
     },
     'XML::TreePP' => {
         deflate => sub { XML::TreePP->new()->write( $_[0] )      },
         inflate => sub { XML::TreePP->new()->parse( $_[0] )      },
+        xml     => 1,
     },
 };
 
