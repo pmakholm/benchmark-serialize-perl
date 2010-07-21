@@ -1,5 +1,8 @@
 Changes for Benchmark::Serialize
 
+0.04 - Wed Jul 21 09:09:25 2010
+    Added benchmark for JSON::DWIW and a prettyfied version of JSON::XS
+
 0.03 - Tue Nov 24 13:56:42 2009
 	Added the following benchmarks: PHP::Serilization::XS, Data::asXML, XML::TreePP
 	Added :xml tag
