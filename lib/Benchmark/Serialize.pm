@@ -132,7 +132,12 @@ my $benchmarks = {
         inflate  => sub { JSON::XS::decode_json($_[0])           },
         default  => 1,
         json     => 1
-    },    
+    },
+   'JSON::DWIW' => {
+        deflate  => sub { JSON::DWIW->to_json($_[0])             },
+        inflate  => sub { JSON::DWIW->from_json($_[0])           },
+        json     => 1,
+    },
     'Storable' => {
         deflate  => sub { Storable::nfreeze($_[0])               },
         inflate  => sub { Storable::thaw($_[0])                  },
