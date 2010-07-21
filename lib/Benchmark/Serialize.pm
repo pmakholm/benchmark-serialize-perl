@@ -142,7 +142,7 @@ my $benchmarks = {
     },
     'JSON::DWIW' => {
         deflate  => sub { JSON::DWIW->to_json($_[0])             },
-        inflate  => sub { JSON::DWIW->from_json($_[0])           },
+        inflate  => sub { JSON::DWIW::deserialize($_[0])         },
         json     => 1,
     },
     'Storable' => {
