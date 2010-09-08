@@ -1,5 +1,8 @@
 Changes for Benchmark::Serialize
 
+0.06 - Wed Sep  8 16:01:03 2010
+	Add test for idempotence of transformation
+
 0.05 - Wed Sep  8 11:06:21 2010
 	Added benchmark for Data::Pond
 
