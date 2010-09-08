@@ -1,6 +1,6 @@
 Changes for Benchmark::Serialize
 
-0.04 - Wed Sep  8 11:06:21 2010
+0.05 - Wed Sep  8 11:06:21 2010
 	Added benchmark for Data::Pond
 
 0.04 - Wed Jul 21 09:09:25 2010
