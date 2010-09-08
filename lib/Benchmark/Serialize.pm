@@ -9,11 +9,11 @@ Benchmark::Serialize - Benchmarks of serialization modules
 
 =head1 VERSION
 
-Version 0.05
+Version 0.06
 
 =cut
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 =head1 SYNOPSIS
 
@@ -81,6 +81,7 @@ The following tags are supported
 =cut
 
 use Benchmark          qw[timestr];
+use Test::Deep::NoTest;
 use UNIVERSAL::require qw[];
 
 use Exporter qw(import);
@@ -252,7 +253,11 @@ sub cmpthese {
         $benchmark->{args} = [ $benchmark->{args}->() ] if exists $benchmark->{args}
                                                         && ref $benchmark->{args} eq "CODE";
 
-        printf( "%-${width}s : %s\n", $packages[0], $packages[0]->VERSION );
+        my $deflated = $benchmark->{deflate}->($structure, @{ $benchmark->{args} } );
+        my $inflated = $benchmark->{inflate}->($deflated,  @{ $benchmark->{args} } );
+
+        printf( "%-${width}s : %8s %s\n", $packages[0], $packages[0]->VERSION, 
+                    eq_deeply($inflated, $structure) ? "Identity transformation" : "Changes representation" );
 
         $results->{deflate}->{$name} = timeit_deflate( $iterations, $structure, $benchmark )
             if $benchmark_deflate;
@@ -260,7 +265,7 @@ sub cmpthese {
         $results->{inflate}->{$name} = timeit_inflate( $iterations, $structure, $benchmark )
             if $benchmark_inflate;
 
-        $results->{size}->{$name}    = length( $benchmark->{deflate}->($structure, @{ $benchmark->{args} } ) );
+        $results->{size}->{$name}    = length( $deflated );
     }
 
     output( 'Sizes', "size", $output, $results->{size}, $width )
