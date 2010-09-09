@@ -112,6 +112,10 @@ my $benchmarks = {
         default  => 1,
         core     => 1,
     },
+    'Data::MessagePack' => {
+        deflate  => sub { Data::MessagePack->pack($_[0])         },
+        inflate  => sub { Data::MessagePack->unpack($_[0])       },
+    },
     'Data::Taxi' => {
         deflate  => sub { Data::Taxi::freeze($_[0])              },
         inflate  => sub { Data::Taxi::thaw($_[0])                },
