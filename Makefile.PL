@@ -14,6 +14,7 @@ WriteMakefile(
     PREREQ_PM => {
 	'UNIVERSAL::require' => 0,
         'Test::More' => 0,
+        'Test::Deep::NoTest' => 0,
     },
     META_MERGE          => {
         resources => {
