@@ -257,8 +257,15 @@ sub cmpthese {
         $benchmark->{args} = [ $benchmark->{args}->() ] if exists $benchmark->{args}
                                                         && ref $benchmark->{args} eq "CODE";
 
-        my $deflated = $benchmark->{deflate}->($structure, @{ $benchmark->{args} } );
-        my $inflated = $benchmark->{inflate}->($deflated,  @{ $benchmark->{args} } );
+        my ($deflated, $inflated);
+        eval {
+            $deflated = $benchmark->{deflate}->($structure, @{ $benchmark->{args} } );
+            $inflated = $benchmark->{inflate}->($deflated,  @{ $benchmark->{args} } );
+            1;
+        } or do {
+            warn "Benchmark $name died with:\n    $@\n";
+            next BENCHMARK;
+        };
 
         printf( "%-${width}s : %8s %s\n", $packages[0], $packages[0]->VERSION, 
                     eq_deeply($inflated, $structure) ? "Identity transformation" : "Changes representation" );
