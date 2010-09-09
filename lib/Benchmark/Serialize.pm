@@ -150,7 +150,7 @@ my $benchmarks = {
     'JSON::XS,pretty' => {
         deflate  => sub { $_[1]->encode( $_[0] ) },
         inflate  => sub { $_[1]->decode( $_[0] ) },
-        args     => sub { JSON::XS->new->pretty(1)->canonical(1) },
+        args     => sub { JSON::XS->new->pretty(1)->allow_blessed(1)->convert_blessed(1)->canonical(1) },
         json     => 1,
         packages => ['JSON::XS'],
     },
