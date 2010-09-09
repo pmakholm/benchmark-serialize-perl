@@ -1,5 +1,10 @@
 Changes for Benchmark::Serialize
 
+0.07 - Thu Sep  9 09:24:53 2010
+	Added benchmark for Data::MessagePack
+	Improved handling of failing benchmarks
+	Added option to test script to pass structure as perl code
+
 0.06 - Wed Sep  8 16:01:03 2010
 	Add test for idempotence of transformation
 
