@@ -282,10 +282,10 @@ sub cmpthese {
     output( 'Sizes', "size", $output, $results->{size}, $width )
         if $benchmark_size;
 
-    output( 'Deflate', "time", $output, $results->{deflate}, $width )
+    output( 'Deflate (perl -> serialized)', "time", $output, $results->{deflate}, $width )
         if $benchmark_deflate;
 
-    output( 'Inflate', "time", $output, $results->{inflate}, $width )
+    output( 'Inflate (serialized -> perl)', "time", $output, $results->{inflate}, $width )
         if $benchmark_inflate;
 }
 
