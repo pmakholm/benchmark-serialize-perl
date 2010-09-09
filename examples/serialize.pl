@@ -26,6 +26,11 @@ Getopt::Long::GetOptions(
         unless YAML->require;
 
         $structure = YAML::LoadFile( $_[1] );
+    },
+    'e|eval=s'       => sub {
+        $structure = eval $_[1];
+
+        die unless defined $structure;
     }
 ) or exit 1;
 
