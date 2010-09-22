@@ -89,6 +89,10 @@ our @EXPORT_OK   = qw( cmpthese );
 our %EXPORT_TAGS = ( all => \@EXPORT_OK );
 
 my $benchmarks = {
+    'AnyMongo::BSON' => {
+        deflate => sub { AnyMongo::BSON::bson_encode( $_[0] )    },
+        inflate => sub { AnyMongo::BSON::bson_decode( $_[0] )    },
+    },
     'Bencode' => {
         deflate  => sub { Bencode::bencode($_[0])                },
         inflate  => sub { Bencode::bdecode($_[0])                }
