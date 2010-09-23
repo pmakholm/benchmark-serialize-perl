@@ -163,6 +163,10 @@ my $benchmarks = {
         inflate  => sub { JSON::DWIW::deserialize($_[0])         },
         json     => 1,
     },
+    'JSYNC' => {
+        deflate  => sub { JSYNC::dump($_[0])                     },
+        inflate  => sub { JSYNC::load($_[0])                     },
+    },
     'Storable' => {
         deflate  => sub { Storable::nfreeze($_[0])               },
         inflate  => sub { Storable::thaw($_[0])                  },
