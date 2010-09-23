@@ -221,6 +221,7 @@ my $benchmarks = {
 our $benchmark_deflate  = 1;       # boolean
 our $benchmark_inflate  = 1;       # boolean
 our $benchmark_size     = 1;       # boolean
+our $verbose            = 1;       # boolean
 our $output             = 'chart'; # chart or list
 
 sub cmpthese {
@@ -274,9 +275,12 @@ sub cmpthese {
             warn "Benchmark $name died with:\n    $@\n";
             next BENCHMARK;
         };
-
+    
+        my ($identity, $identity_diag) = Test::Deep::cmp_details( $inflated, $structure );
         printf( "%-${width}s : %8s %s\n", $packages[0], $packages[0]->VERSION, 
-                    eq_deeply($inflated, $structure) ? "Identity transformation" : "Changes representation" );
+                    $identity ? "Identity transformation" : "Changes representation" );
+
+        print Test::Deep::deep_diag($identity_diag), "\n" if !$identity and $Benchmark::Serialize::verbose;
 
         $results->{deflate}->{$name} = timeit_deflate( $iterations, $structure, $benchmark )
             if $benchmark_deflate;

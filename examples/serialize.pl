@@ -21,6 +21,7 @@ Getopt::Long::GetOptions(
     'inflate!'       => \$Benchmark::Serialize::benchmark_inflate,
     'i|iterations=i' => \$iterations,
     'o|output=s'     => \$Benchmark::Serialize::output,
+    'v|verbose!'     => \$Benchmark::Serialize::verbose,
     's|structure=s'  => sub {
         die "Structure option requires YAML.\n"
         unless YAML->require;
