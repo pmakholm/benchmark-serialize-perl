@@ -6,6 +6,8 @@ use warnings;
 use Getopt::Long;
 use Benchmark::Serialize qw( cmpthese );
 
+use Benchmark::Serialize::Library::Data::Serializer;
+
 my @benchmark          = ();      # package names of benchmarks to run
 my $iterations         = -1;      # integer
 my $structure          = {
@@ -28,6 +30,7 @@ Getopt::Long::GetOptions(
 
         $structure = YAML::LoadFile( $_[1] );
     },
+    'ds|data-serializer=s' => sub { Benchmark::Serialize::Library::Data::Serializer->register($_[1]) }, 
     'e|eval=s'       => sub {
         $structure = eval $_[1];
 
