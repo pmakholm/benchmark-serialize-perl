@@ -35,59 +35,44 @@ sub import {
     my @modules = @_;
 
     for my $module (@modules) {
-        Benchmark::Serialize::Library->register(
-            "Data::Serializer::$module" => {
-                deflate  => \&std_deflate,
-                inflate  => \&std_inflate,
-                packages => [ 'Data::Serializer' ],
-                args     => sub { 
-                    Data::Serializer->new(
-                                             serializer => $module
-                    );
-                },
+        my $basename = "Data::Serializer::$module";
+        my %options  = (
+                deflate      => \&std_deflate,
+                inflate      => \&std_inflate,
+                packages     => [ 'Data::Serializer' ],
                 "DS-$module" => 1,
+        );
+
+        Benchmark::Serialize::Library->register(
+            $basename => {
+                %options,
+                args => sub { 
+                    Data::Serializer->new( serializer => $module );
+                },
             }
         );
         Benchmark::Serialize::Library->register(
-            "Data::Serializer::$module,raw" => {
-                deflate  => \&std_deflate,
-                inflate  => \&std_inflate,
-                packages => [ 'Data::Serializer' ],
-                args     => sub { 
-                    Data::Serializer->new(
-                                             serializer => $module,
-					     raw        => 1
-                    );
+            "$basename,raw" => {
+                %options,
+                args => sub { 
+                    Data::Serializer->new( serializer => $module, raw  => 1 );
                 },
-                "DS-$module" => 1,
             }
         );
         Benchmark::Serialize::Library->register(
-            "Data::Serializer::$module,compressed" => {
-                deflate  => \&std_deflate,
-                inflate  => \&std_inflate,
-                packages => [ 'Data::Serializer' ],
-                args     => sub { 
-                    Data::Serializer->new(
-                                             serializer => $module,
-					     compressed => 1
-                    );
+            "$basename,compressed" => {
+                %options,
+                args => sub { 
+                    Data::Serializer->new( serializer => $module, compress => 1 );
                 },
-                "DS-$module" => 1,
             }
         );
         Benchmark::Serialize::Library->register(
-            "Data::Serializer::$module,encrypted" => {
-                deflate  => \&std_deflate,
-                inflate  => \&std_inflate,
-                packages => [ 'Data::Serializer' ],
-                args     => sub { 
-                    Data::Serializer->new(
-                                             serializer => $module,
-					     secret     => "foobar"
-                    );
+            "$basename,encrypted" => {
+                %options,
+                args  => sub { 
+                    Data::Serializer->new( serializer => $module, secret => "foobar" );
                 },
-                "DS-$module" => 1,
             }
         );
     }
