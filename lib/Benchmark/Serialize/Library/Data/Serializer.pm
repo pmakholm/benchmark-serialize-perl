@@ -4,6 +4,7 @@ use strict;
 use warnings;
 
 use Benchmark::Serialize::Library;
+use Scalar::Util qw(blessed);
 
 =head1 NAME
 
@@ -11,43 +12,55 @@ Benchmark::Serialize::Library::Data::Serializer - Data::Serializer benchmarks
 
 =head1 SYNOPSIS
 
-    # Add tests for Data::Serializer::Storable
-    use Benchmark::Serializer::Library::Data::Serializer qw(Storable);
+    # Register tests on use time
+    use Benchmark::Serializer::Library::Data::Serializer qw(JSON);
 
-    # Add tests for Data::Serializer::JSON
+    # Register tests on run time
     Benchmark::Serializer::Library::Data::Serializer->register('JSON');
+    
 
 =head1 DESCRIPTION
 
 This modules adds a set of benchmarks to L<Benchmark::Serialize> for
-different uses of the L<Data::Serializer> modules.
+different uses of the L<Data::Serializer> modules. Both native Data::Serializer
+bridges and the wrapping of existing benchmarks in a generic Data::Serializer
+bridge is supported.  
+
+If the argument to import/register starts with a '+' it is interpreted as a
+existing benchmark to be wrapped in the generic wrapper. Other wise the
+argument is interpreted as a normal Data::Serializer bridge.
+
+Note that the generic bridge is a bit slower than a hand crafted bridge would
+be.
 
 =head1 Benchmark tags
 
 For each added serializer a new Benchmark tag is created called
-C<:DS-<serializerE<gt>>, i.e C<:DS-Storable> and C<:DS-JSON> if used as in the
-synopsis
+C<:DS-<nameE<gt>>, i.e C<:DS-JSON> if used as in the synopsis
 
 =cut 
 
 sub import {
     my $pkg     = shift;
-    my @modules = @_;
+    my @imports = map { /^\+(.*)/ ? Benchmark::Serialize::Library->load($1) : $_ } @_;
 
-    for my $module (@modules) {
-        my $basename = "Data::Serializer::$module";
+    for (@imports) {
+        my $module   = blessed $_ ? "Benchmark::Serialize" : $_; 
+        my $name     = blessed $_ ? $_->name               : $_;
+        my $basename = blessed $_ ? $_->name . ",ds"       : "Data::Serializer::$module";
+        my %extra    = blessed $_ ? %$_                    : ();
         my %options  = (
                 deflate      => \&std_deflate,
                 inflate      => \&std_inflate,
                 packages     => [ 'Data::Serializer' ],
-                "DS-$module" => 1,
+                "DS-$name"   => 1,
         );
 
         Benchmark::Serialize::Library->register(
             $basename => {
                 %options,
                 args => sub { 
-                    Data::Serializer->new( serializer => $module );
+                    Data::Serializer->new( serializer => $module, options => \%extra );
                 },
             }
         );
@@ -55,7 +68,7 @@ sub import {
             "$basename,raw" => {
                 %options,
                 args => sub { 
-                    Data::Serializer->new( serializer => $module, raw  => 1 );
+                    Data::Serializer->new( serializer => $module, raw  => 1, options => \%extra );
                 },
             }
         );
@@ -63,7 +76,7 @@ sub import {
             "$basename,compressed" => {
                 %options,
                 args => sub { 
-                    Data::Serializer->new( serializer => $module, compress => 1 );
+                    Data::Serializer->new( serializer => $module, compress => 1, options => \%extra );
                 },
             }
         );
@@ -71,7 +84,7 @@ sub import {
             "$basename,encrypted" => {
                 %options,
                 args  => sub { 
-                    Data::Serializer->new( serializer => $module, secret => "foobar" );
+                    Data::Serializer->new( serializer => $module, secret => "foobar", options => \%extra );
                 },
             }
         );
