@@ -6,6 +6,7 @@ use warnings;
 use Getopt::Long;
 use Benchmark::Serialize qw( cmpthese );
 
+use Benchmark::Serialize::Library::ProtocolBuffers;
 use Benchmark::Serialize::Library::Data::Serializer;
 
 my @benchmark          = ();      # package names of benchmarks to run
@@ -15,6 +16,8 @@ my $structure          = {
     hash   => { 'a' .. 'z' },
     string => 'x' x 200
 };
+
+my $protocolbuffers; # Can't process inline as we might need the structure
 
 Getopt::Long::Configure( 'bundling' );
 Getopt::Long::GetOptions(
@@ -30,13 +33,18 @@ Getopt::Long::GetOptions(
 
         $structure = YAML::LoadFile( $_[1] );
     },
-    'ds|data-serializer=s' => sub { Benchmark::Serialize::Library::Data::Serializer->register($_[1]) }, 
+    'ds|data-serializer=s'  => sub { Benchmark::Serialize::Library::Data::Serializer->register($_[1]) }, 
+    'pb|protocol-buffers:s' => \$protocolbuffers,
     'e|eval=s'       => sub {
         $structure = eval $_[1];
 
         die unless defined $structure;
     }
 ) or exit 1;
+
+if (defined $protocolbuffers) {
+    Benchmark::Serialize::Library::ProtocolBuffers->register( ProtocolBuffers => ($protocolbuffers ? $protocolbuffers : $structure) );
+}
 
 @benchmark = ("all") unless @benchmark;
 
