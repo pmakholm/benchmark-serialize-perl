@@ -120,11 +120,10 @@ sub cmpthese {
             next BENCHMARK;
         };
     
-        my ($identity, $identity_diag) = Test::Deep::cmp_details( $inflated, $structure );
-        printf( "%-${width}s : %8s %s\n", $benchmark->name, $benchmark->version, 
-                    $identity ? "Identity transformation" : "Changes representation" );
+        my ($likeliness, $diag) = likeliness( $inflated, $structure );
+        printf( "%-${width}s : %8s %s\n", $benchmark->name, $benchmark->version, $likeliness);
 
-        print Test::Deep::deep_diag($identity_diag), "\n" if !$identity and $Benchmark::Serialize::verbose;
+        print Test::Deep::deep_diag($diag), "\n" if defined($diag) and $Benchmark::Serialize::verbose;
 
         $results->{deflate}->{$name} = timeit_deflate( $iterations, $structure, $benchmark )
             if $benchmark_deflate;
@@ -263,6 +262,25 @@ sub timeit_inflate {
 
 sub width {
     return length( ( sort { length $a <=> length $b } @_ )[-1] );
+}
+
+sub likeliness {
+    my ($got, $expected) = @_;
+    my ($ok, $diag);
+
+    ($ok, $diag) = Test::Deep::cmp_details( $got, $expected );
+    return ("Identical", undef) if $ok;
+
+    ($ok, $diag) = Test::Deep::cmp_details( $got, noclass($expected) );
+    return ("Changes blessing", undef) if $ok;
+
+    ($ok, $diag) = Test::Deep::cmp_details( $got, noclass(superhashof $expected) );
+    return ("Adds content", undef) if $ok;
+
+    ($ok, $diag) = Test::Deep::cmp_details( $got, noclass(subhashof $expected) );
+    return ("Removes content", undef) if $ok;
+
+    return ("Changes content", $diag);
 }
 
 =head1 RESULTS
