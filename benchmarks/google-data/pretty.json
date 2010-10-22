@@ -1,0 +1,2479 @@
+{
+   "feed" : {
+      "openSearch_startIndex" : {
+         "value" : 1
+      },
+      "xmlns" : "http://www.w3.org/2005/Atom",
+      "entry" : [
+         {
+            "gCal_guestsCanModify" : {
+               "value" : "false"
+            },
+            "gCal_guestsCanInviteOthers" : {
+               "value" : "true"
+            },
+            "gd_who" : [
+               {
+                  "rel" : "http://schemas.google.com/g/2005#event.organizer",
+                  "email" : "developer-calendar@google.com",
+                  "valueString" : "developer-calendar@google.com"
+               }
+            ],
+            "gd_comments" : {
+               "gd_feedLink" : {
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/gggie5r8hm0q4oioi0oho1i8bk/comments"
+               }
+            },
+            "content" : {
+               "value" : "Speaker(s): Reto Meier, Claudio Cherubino, Paul Kinlan\nTopic(s): Android\n\nDescription:\nGoogle Developer Days are a chance to learn about Google developer products and meet the engineers who work on them. These one-day events will include seminars on mobile and web technologies including Android, HTML5, Chrome, App Engine, Google Web Toolkit and more.\n\nhttp://www.google.com/events/developerday/2010/",
+               "type" : "text"
+            },
+            "gd_where" : [
+               {
+                  "valueString" : "Prague, Czech Republic"
+               }
+            ],
+            "author" : [
+               {
+                  "email" : {
+                     "value" : "developer-calendar@google.com"
+                  },
+                  "name" : {
+                     "value" : "Google Developer Calendar"
+                  }
+               }
+            ],
+            "gCal_uid" : {
+               "value" : "gggie5r8hm0q4oioi0oho1i8bk@google.com"
+            },
+            "gd_eventStatus" : {
+               "value" : "http://schemas.google.com/g/2005#event.confirmed"
+            },
+            "gCal_sequence" : {
+               "value" : 2
+            },
+            "id" : {
+               "value" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/gggie5r8hm0q4oioi0oho1i8bk"
+            },
+            "updated" : {
+               "value" : "2010-10-22T12:55:43.000Z"
+            },
+            "category" : [
+               {
+                  "scheme" : "http://schemas.google.com/g/2005#kind",
+                  "term" : "http://schemas.google.com/g/2005#event"
+               }
+            ],
+            "link" : [
+               {
+                  "rel" : "alternate",
+                  "href" : "http://www.google.com/calendar/event?eid=Z2dnaWU1cjhobTBxNG9pb2kwb2hvMWk4YmsgZGV2ZWxvcGVyLWNhbGVuZGFyQGdvb2dsZS5jb20",
+                  "title" : "alternate",
+                  "type" : "text/html"
+               },
+               {
+                  "rel" : "self",
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/gggie5r8hm0q4oioi0oho1i8bk",
+                  "type" : "application/atom+xml"
+               }
+            ],
+            "gCal_guestsCanSeeGuests" : {
+               "value" : "true"
+            },
+            "gd_when" : [
+               {
+                  "endTime" : "2010-11-16T18:00:00.000-08:00",
+                  "startTime" : "2010-11-16T09:00:00.000-08:00"
+               }
+            ],
+            "gd_transparency" : {
+               "value" : "http://schemas.google.com/g/2005#event.opaque"
+            },
+            "published" : {
+               "value" : "2010-07-13T23:37:22.000Z"
+            },
+            "gCal_anyoneCanAddSelf" : {
+               "value" : "false"
+            },
+            "title" : {
+               "value" : "Google Developer Day - Prague, Czech Republic",
+               "type" : "text"
+            }
+         },
+         {
+            "gCal_guestsCanModify" : {
+               "value" : "false"
+            },
+            "gCal_guestsCanInviteOthers" : {
+               "value" : "true"
+            },
+            "gd_who" : [
+               {
+                  "rel" : "http://schemas.google.com/g/2005#event.organizer",
+                  "email" : "developer-calendar@google.com",
+                  "valueString" : "developer-calendar@google.com"
+               }
+            ],
+            "gd_comments" : {
+               "gd_feedLink" : {
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/qg7loq24fr8vkom2pofba25opg/comments"
+               }
+            },
+            "content" : {
+               "value" : "Google Developer Days are a chance to learn about Google developer products and meet the engineers who work on them. These one-day events will include seminars on mobile and web technologies including Android, HTML5, Chrome, Cloud Platform & Tools, Geo, Google Web Toolkit, Social Web, and more.\n\nSpeaker(s): Reto Meier, Claudio Cherubino, Paul Kinlan\nTopic(s): Android, HTML5, Chrome, Cloud Platform & Tools, Geo, Google Web Toolkit, Social Web\nURL: http://www.google.com/events/developerday/2010/munich/\n",
+               "type" : "text"
+            },
+            "gd_where" : [
+               {
+                  "valueString" : "Munich, Germany"
+               }
+            ],
+            "author" : [
+               {
+                  "email" : {
+                     "value" : "developer-calendar@google.com"
+                  },
+                  "name" : {
+                     "value" : "Google Developer Calendar"
+                  }
+               }
+            ],
+            "gCal_uid" : {
+               "value" : "qg7loq24fr8vkom2pofba25opg@google.com"
+            },
+            "gd_eventStatus" : {
+               "value" : "http://schemas.google.com/g/2005#event.confirmed"
+            },
+            "gCal_sequence" : {
+               "value" : 2
+            },
+            "id" : {
+               "value" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/qg7loq24fr8vkom2pofba25opg"
+            },
+            "updated" : {
+               "value" : "2010-10-22T12:55:20.000Z"
+            },
+            "category" : [
+               {
+                  "scheme" : "http://schemas.google.com/g/2005#kind",
+                  "term" : "http://schemas.google.com/g/2005#event"
+               }
+            ],
+            "link" : [
+               {
+                  "rel" : "alternate",
+                  "href" : "http://www.google.com/calendar/event?eid=cWc3bG9xMjRmcjh2a29tMnBvZmJhMjVvcGcgZGV2ZWxvcGVyLWNhbGVuZGFyQGdvb2dsZS5jb20",
+                  "title" : "alternate",
+                  "type" : "text/html"
+               },
+               {
+                  "rel" : "self",
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/qg7loq24fr8vkom2pofba25opg",
+                  "type" : "application/atom+xml"
+               }
+            ],
+            "gCal_guestsCanSeeGuests" : {
+               "value" : "true"
+            },
+            "gd_when" : [
+               {
+                  "endTime" : "2010-11-09T18:00:00.000-08:00",
+                  "startTime" : "2010-11-09T09:00:00.000-08:00"
+               }
+            ],
+            "gd_transparency" : {
+               "value" : "http://schemas.google.com/g/2005#event.opaque"
+            },
+            "published" : {
+               "value" : "2010-07-13T23:36:19.000Z"
+            },
+            "gCal_anyoneCanAddSelf" : {
+               "value" : "false"
+            },
+            "title" : {
+               "value" : "Google Developer Day - Munich, Germany",
+               "type" : "text"
+            }
+         },
+         {
+            "gCal_guestsCanModify" : {
+               "value" : "false"
+            },
+            "gCal_guestsCanInviteOthers" : {
+               "value" : "true"
+            },
+            "gd_who" : [
+               {
+                  "rel" : "http://schemas.google.com/g/2005#event.organizer",
+                  "email" : "developer-calendar@google.com",
+                  "valueString" : "developer-calendar@google.com"
+               }
+            ],
+            "gd_comments" : {
+               "gd_feedLink" : {
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/fq735u7iffjivpa7fep4c9161c/comments"
+               }
+            },
+            "content" : {
+               "value" : "Google Developer Days are a chance to learn about Google developer products and meet the engineers who work on them. These one-day events will include seminars on mobile and web technologies including Android, HTML5, Chrome, App Engine, Google Web Toolkit and more.\n\nSpeaker(s): Reto Meier, Claudio Cherubino, Paul Kinlan\nTopic(s): Android, HTML5, Chrome, Cloud Platform & Tools, Geo, Google Web Toolkit, Social Web\nURL(s): http://www.google.com/events/developerday/2010/moscow/\n\n",
+               "type" : "text"
+            },
+            "gd_where" : [
+               {
+                  "valueString" : "Moscow, Russia"
+               }
+            ],
+            "author" : [
+               {
+                  "email" : {
+                     "value" : "developer-calendar@google.com"
+                  },
+                  "name" : {
+                     "value" : "Google Developer Calendar"
+                  }
+               }
+            ],
+            "gCal_uid" : {
+               "value" : "fq735u7iffjivpa7fep4c9161c@google.com"
+            },
+            "gd_eventStatus" : {
+               "value" : "http://schemas.google.com/g/2005#event.confirmed"
+            },
+            "gCal_sequence" : {
+               "value" : 2
+            },
+            "id" : {
+               "value" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/fq735u7iffjivpa7fep4c9161c"
+            },
+            "updated" : {
+               "value" : "2010-10-22T12:54:48.000Z"
+            },
+            "category" : [
+               {
+                  "scheme" : "http://schemas.google.com/g/2005#kind",
+                  "term" : "http://schemas.google.com/g/2005#event"
+               }
+            ],
+            "link" : [
+               {
+                  "rel" : "alternate",
+                  "href" : "http://www.google.com/calendar/event?eid=ZnE3MzV1N2lmZmppdnBhN2ZlcDRjOTE2MWMgZGV2ZWxvcGVyLWNhbGVuZGFyQGdvb2dsZS5jb20",
+                  "title" : "alternate",
+                  "type" : "text/html"
+               },
+               {
+                  "rel" : "self",
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/fq735u7iffjivpa7fep4c9161c",
+                  "type" : "application/atom+xml"
+               }
+            ],
+            "gCal_guestsCanSeeGuests" : {
+               "value" : "true"
+            },
+            "gd_when" : [
+               {
+                  "endTime" : "2010-11-12T18:00:00.000-08:00",
+                  "startTime" : "2010-11-12T09:00:00.000-08:00"
+               }
+            ],
+            "gd_transparency" : {
+               "value" : "http://schemas.google.com/g/2005#event.opaque"
+            },
+            "published" : {
+               "value" : "2010-07-13T23:38:55.000Z"
+            },
+            "gCal_anyoneCanAddSelf" : {
+               "value" : "false"
+            },
+            "title" : {
+               "value" : "Google Developer Day - Moscow, Russia",
+               "type" : "text"
+            }
+         },
+         {
+            "gCal_guestsCanModify" : {
+               "value" : "false"
+            },
+            "gCal_guestsCanInviteOthers" : {
+               "value" : "true"
+            },
+            "gd_who" : [
+               {
+                  "rel" : "http://schemas.google.com/g/2005#event.organizer",
+                  "email" : "developer-calendar@google.com",
+                  "gd_attendeeStatus" : {
+                     "value" : "http://schemas.google.com/g/2005#event.accepted"
+                  },
+                  "valueString" : "Google Developer Calendar"
+               }
+            ],
+            "gd_comments" : {
+               "gd_feedLink" : {
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/3f5euhaht9pqq13ghdj9v5qkh0/comments"
+               }
+            },
+            "content" : {
+               "value" : "Speaker(s): Reto Meier, Justin Mattson, Roman Nurik, Daniel Galpin, Nick Butcher, Paul Kinlan, Michael Mahemoff, Claudio Cherubino\nTopic(s): Android, Chrome, HTML5\nURL:\n\nLocation: \nMirbis Institute \nMarksitskaia Street\nBldg 34 camp 7\nMoscow, Russia\n\nAndroid - Auditorium 319\nChrome - Auditorium 305",
+               "type" : "text"
+            },
+            "gd_where" : [
+               {
+                  "valueString" : ""
+               }
+            ],
+            "author" : [
+               {
+                  "email" : {
+                     "value" : "developer-calendar@google.com"
+                  },
+                  "name" : {
+                     "value" : "Google Developer Calendar"
+                  }
+               }
+            ],
+            "gCal_uid" : {
+               "value" : "3f5euhaht9pqq13ghdj9v5qkh0@google.com"
+            },
+            "gd_eventStatus" : {
+               "value" : "http://schemas.google.com/g/2005#event.confirmed"
+            },
+            "gCal_sequence" : {
+               "value" : 0
+            },
+            "id" : {
+               "value" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/3f5euhaht9pqq13ghdj9v5qkh0"
+            },
+            "updated" : {
+               "value" : "2010-10-22T11:47:32.000Z"
+            },
+            "category" : [
+               {
+                  "scheme" : "http://schemas.google.com/g/2005#kind",
+                  "term" : "http://schemas.google.com/g/2005#event"
+               }
+            ],
+            "link" : [
+               {
+                  "rel" : "alternate",
+                  "href" : "http://www.google.com/calendar/event?eid=M2Y1ZXVoYWh0OXBxcTEzZ2hkajl2NXFraDAgZGV2ZWxvcGVyLWNhbGVuZGFyQGdvb2dsZS5jb20",
+                  "title" : "alternate",
+                  "type" : "text/html"
+               },
+               {
+                  "rel" : "self",
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/3f5euhaht9pqq13ghdj9v5qkh0",
+                  "type" : "application/atom+xml"
+               }
+            ],
+            "gCal_guestsCanSeeGuests" : {
+               "value" : "true"
+            },
+            "gd_when" : [
+               {
+                  "endTime" : "2010-11-11T07:00:00.000-08:00",
+                  "startTime" : "2010-11-10T23:00:00.000-08:00"
+               }
+            ],
+            "gd_transparency" : {
+               "value" : "http://schemas.google.com/g/2005#event.opaque"
+            },
+            "published" : {
+               "value" : "2010-10-21T23:08:31.000Z"
+            },
+            "gCal_anyoneCanAddSelf" : {
+               "value" : "false"
+            },
+            "title" : {
+               "value" : "Pre-GDD Hackathon - Moscow",
+               "type" : "text"
+            }
+         },
+         {
+            "gCal_guestsCanModify" : {
+               "value" : "false"
+            },
+            "gCal_guestsCanInviteOthers" : {
+               "value" : "true"
+            },
+            "gd_who" : [
+               {
+                  "rel" : "http://schemas.google.com/g/2005#event.organizer",
+                  "email" : "developer-calendar@google.com",
+                  "valueString" : "developer-calendar@google.com"
+               }
+            ],
+            "gd_comments" : {
+               "gd_feedLink" : {
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/28qkvm5g2t64ugj5vue32275o4/comments"
+               }
+            },
+            "content" : {
+               "value" : "Speaker(s): Reto Meier, Justin Mattson, Roman Nurik, Daniel Galpin, Nick Butcher\nTopic(s): Android, Chrome, HTML5, Paul Kinlan, Michael Mahemoff\nURL:\n\n7-8 Nov\n7th: TBD\n8th: 14:00 - 21:00\n\nLocation:\nSAE Academy \nBayerwaldstrasse 43\n81737 Munich, Germany",
+               "type" : "text"
+            },
+            "gd_where" : [
+               {
+                  "valueString" : "SAE Academy, Munich, Germany"
+               }
+            ],
+            "author" : [
+               {
+                  "email" : {
+                     "value" : "developer-calendar@google.com"
+                  },
+                  "name" : {
+                     "value" : "Google Developer Calendar"
+                  }
+               }
+            ],
+            "gCal_uid" : {
+               "value" : "28qkvm5g2t64ugj5vue32275o4@google.com"
+            },
+            "gd_eventStatus" : {
+               "value" : "http://schemas.google.com/g/2005#event.confirmed"
+            },
+            "gCal_sequence" : {
+               "value" : 0
+            },
+            "id" : {
+               "value" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/28qkvm5g2t64ugj5vue32275o4"
+            },
+            "updated" : {
+               "value" : "2010-10-22T11:31:26.000Z"
+            },
+            "category" : [
+               {
+                  "scheme" : "http://schemas.google.com/g/2005#kind",
+                  "term" : "http://schemas.google.com/g/2005#event"
+               }
+            ],
+            "link" : [
+               {
+                  "rel" : "alternate",
+                  "href" : "http://www.google.com/calendar/event?eid=Mjhxa3ZtNWcydDY0dWdqNXZ1ZTMyMjc1bzQgZGV2ZWxvcGVyLWNhbGVuZGFyQGdvb2dsZS5jb20",
+                  "title" : "alternate",
+                  "type" : "text/html"
+               },
+               {
+                  "rel" : "self",
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/28qkvm5g2t64ugj5vue32275o4",
+                  "type" : "application/atom+xml"
+               }
+            ],
+            "gCal_guestsCanSeeGuests" : {
+               "value" : "true"
+            },
+            "gd_when" : [
+               {
+                  "endTime" : "2010-11-08T15:00:00.000-08:00",
+                  "startTime" : "2010-11-08T06:00:00.000-08:00"
+               }
+            ],
+            "gd_transparency" : {
+               "value" : "http://schemas.google.com/g/2005#event.opaque"
+            },
+            "published" : {
+               "value" : "2010-10-21T05:49:06.000Z"
+            },
+            "gCal_anyoneCanAddSelf" : {
+               "value" : "false"
+            },
+            "title" : {
+               "value" : "Pre-GDD Hackathon - Munich",
+               "type" : "text"
+            }
+         },
+         {
+            "gCal_guestsCanModify" : {
+               "value" : "false"
+            },
+            "gCal_guestsCanInviteOthers" : {
+               "value" : "true"
+            },
+            "gd_who" : [
+               {
+                  "rel" : "http://schemas.google.com/g/2005#event.organizer",
+                  "email" : "developer-calendar@google.com",
+                  "valueString" : "developer-calendar@google.com"
+               }
+            ],
+            "gd_comments" : {
+               "gd_feedLink" : {
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/rlk0nqvtavinsi76pi5d7tungc/comments"
+               }
+            },
+            "content" : {
+               "value" : "Speaker(s): Reto Meier, Justin Mattson, Roman Nurik, Daniel Galpin, Nick Butcher\nTopic(s): Android\nURL:",
+               "type" : "text"
+            },
+            "gd_where" : [
+               {
+                  "valueString" : "Florence, Italy"
+               }
+            ],
+            "author" : [
+               {
+                  "email" : {
+                     "value" : "developer-calendar@google.com"
+                  },
+                  "name" : {
+                     "value" : "Google Developer Calendar"
+                  }
+               }
+            ],
+            "gCal_uid" : {
+               "value" : "rlk0nqvtavinsi76pi5d7tungc@google.com"
+            },
+            "gd_eventStatus" : {
+               "value" : "http://schemas.google.com/g/2005#event.confirmed"
+            },
+            "gCal_sequence" : {
+               "value" : 0
+            },
+            "id" : {
+               "value" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/rlk0nqvtavinsi76pi5d7tungc"
+            },
+            "updated" : {
+               "value" : "2010-10-22T11:30:46.000Z"
+            },
+            "category" : [
+               {
+                  "scheme" : "http://schemas.google.com/g/2005#kind",
+                  "term" : "http://schemas.google.com/g/2005#event"
+               }
+            ],
+            "link" : [
+               {
+                  "rel" : "alternate",
+                  "href" : "http://www.google.com/calendar/event?eid=cmxrMG5xdnRhdmluc2k3NnBpNWQ3dHVuZ2MgZGV2ZWxvcGVyLWNhbGVuZGFyQGdvb2dsZS5jb20",
+                  "title" : "alternate",
+                  "type" : "text/html"
+               },
+               {
+                  "rel" : "self",
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/rlk0nqvtavinsi76pi5d7tungc",
+                  "type" : "application/atom+xml"
+               }
+            ],
+            "gCal_guestsCanSeeGuests" : {
+               "value" : "true"
+            },
+            "gd_when" : [
+               {
+                  "endTime" : "2010-11-05",
+                  "startTime" : "2010-11-04"
+               }
+            ],
+            "gd_transparency" : {
+               "value" : "http://schemas.google.com/g/2005#event.transparent"
+            },
+            "published" : {
+               "value" : "2010-10-21T05:53:53.000Z"
+            },
+            "gCal_anyoneCanAddSelf" : {
+               "value" : "false"
+            },
+            "title" : {
+               "value" : "Android Developer Lab - Florence",
+               "type" : "text"
+            }
+         },
+         {
+            "gCal_guestsCanModify" : {
+               "value" : "false"
+            },
+            "gCal_guestsCanInviteOthers" : {
+               "value" : "true"
+            },
+            "gd_who" : [
+               {
+                  "rel" : "http://schemas.google.com/g/2005#event.organizer",
+                  "email" : "developer-calendar@google.com",
+                  "gd_attendeeStatus" : {
+                     "value" : "http://schemas.google.com/g/2005#event.accepted"
+                  },
+                  "valueString" : "Google Developer Calendar"
+               }
+            ],
+            "gd_comments" : {
+               "gd_feedLink" : {
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/q66mg17oh4bdq66lhbb5jbc1vo/comments"
+               }
+            },
+            "content" : {
+               "value" : "Speaker(s): Reto Meier, Justin Mattson, Roman Nurik, Daniel Galpin, Nick Butcher\nTopic(s): Android\nURL:\n \nDescription:\nSaal Hall \nBeuth University for Technology Berlin\nLuxemburger Strasse 10\n13353 Berlin, Germany",
+               "type" : "text"
+            },
+            "gd_where" : [
+               {
+                  "valueString" : "Beuth University for Technology Berlin"
+               }
+            ],
+            "author" : [
+               {
+                  "email" : {
+                     "value" : "developer-calendar@google.com"
+                  },
+                  "name" : {
+                     "value" : "Google Developer Calendar"
+                  }
+               }
+            ],
+            "gCal_uid" : {
+               "value" : "q66mg17oh4bdq66lhbb5jbc1vo@google.com"
+            },
+            "gd_eventStatus" : {
+               "value" : "http://schemas.google.com/g/2005#event.confirmed"
+            },
+            "gCal_sequence" : {
+               "value" : 0
+            },
+            "id" : {
+               "value" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/q66mg17oh4bdq66lhbb5jbc1vo"
+            },
+            "updated" : {
+               "value" : "2010-10-22T11:30:29.000Z"
+            },
+            "category" : [
+               {
+                  "scheme" : "http://schemas.google.com/g/2005#kind",
+                  "term" : "http://schemas.google.com/g/2005#event"
+               }
+            ],
+            "link" : [
+               {
+                  "rel" : "alternate",
+                  "href" : "http://www.google.com/calendar/event?eid=cTY2bWcxN29oNGJkcTY2bGhiYjVqYmMxdm8gZGV2ZWxvcGVyLWNhbGVuZGFyQGdvb2dsZS5jb20",
+                  "title" : "alternate",
+                  "type" : "text/html"
+               },
+               {
+                  "rel" : "self",
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/q66mg17oh4bdq66lhbb5jbc1vo",
+                  "type" : "application/atom+xml"
+               }
+            ],
+            "gCal_guestsCanSeeGuests" : {
+               "value" : "true"
+            },
+            "gd_when" : [
+               {
+                  "endTime" : "2010-11-02T09:00:00.000-07:00",
+                  "startTime" : "2010-11-02T01:00:00.000-07:00"
+               }
+            ],
+            "gd_transparency" : {
+               "value" : "http://schemas.google.com/g/2005#event.opaque"
+            },
+            "published" : {
+               "value" : "2010-10-21T21:59:41.000Z"
+            },
+            "gCal_anyoneCanAddSelf" : {
+               "value" : "false"
+            },
+            "title" : {
+               "value" : "Android Developer Lab - Berlin ",
+               "type" : "text"
+            }
+         },
+         {
+            "gCal_guestsCanModify" : {
+               "value" : "false"
+            },
+            "gCal_guestsCanInviteOthers" : {
+               "value" : "true"
+            },
+            "gd_who" : [
+               {
+                  "rel" : "http://schemas.google.com/g/2005#event.organizer",
+                  "email" : "developer-calendar@google.com",
+                  "valueString" : "developer-calendar@google.com"
+               }
+            ],
+            "gd_comments" : {
+               "gd_feedLink" : {
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/0coeupsv9ofc26keu2kim5rrdk/comments"
+               }
+            },
+            "content" : {
+               "value" : "Speaker(s): Ian Ni-Lewis\nTopic(s): Chrome, Native Client\nURL(s): https://spreadsheets.google.com/a/google.com/viewform?formkey=dFU4YzJsT2huZl9fUzRvaGRhUlBUNmc6MQ\n\nDescription:\nA London GTUG Event\n\nJavascript is the language of the web. But it's not always the right tool for the job. What if we could program the web safely and securely, in any language at all? Native Client makes that possible, by bringing together the safety of JavaScript with the flexibility of compiled code. As a bonus, there's usually a substantial performance improvement. This talk explains what Native Client is and how to use it to program web pages with C++.",
+               "type" : "text"
+            },
+            "gd_where" : [
+               {
+                  "valueString" : "TechHub, 76-80 City Road, London EC1Y 2BJ"
+               }
+            ],
+            "author" : [
+               {
+                  "email" : {
+                     "value" : "developer-calendar@google.com"
+                  },
+                  "name" : {
+                     "value" : "Google Developer Calendar"
+                  }
+               }
+            ],
+            "gCal_uid" : {
+               "value" : "0coeupsv9ofc26keu2kim5rrdk@google.com"
+            },
+            "gd_eventStatus" : {
+               "value" : "http://schemas.google.com/g/2005#event.confirmed"
+            },
+            "gCal_sequence" : {
+               "value" : 2
+            },
+            "id" : {
+               "value" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/0coeupsv9ofc26keu2kim5rrdk"
+            },
+            "updated" : {
+               "value" : "2010-10-22T11:26:44.000Z"
+            },
+            "category" : [
+               {
+                  "scheme" : "http://schemas.google.com/g/2005#kind",
+                  "term" : "http://schemas.google.com/g/2005#event"
+               }
+            ],
+            "link" : [
+               {
+                  "rel" : "alternate",
+                  "href" : "http://www.google.com/calendar/event?eid=MGNvZXVwc3Y5b2ZjMjZrZXUya2ltNXJyZGsgZGV2ZWxvcGVyLWNhbGVuZGFyQGdvb2dsZS5jb20",
+                  "title" : "alternate",
+                  "type" : "text/html"
+               },
+               {
+                  "rel" : "self",
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/0coeupsv9ofc26keu2kim5rrdk",
+                  "type" : "application/atom+xml"
+               }
+            ],
+            "gCal_guestsCanSeeGuests" : {
+               "value" : "true"
+            },
+            "gd_when" : [
+               {
+                  "endTime" : "2010-10-27T13:00:00.000-07:00",
+                  "startTime" : "2010-10-27T10:30:00.000-07:00"
+               }
+            ],
+            "gd_transparency" : {
+               "value" : "http://schemas.google.com/g/2005#event.opaque"
+            },
+            "published" : {
+               "value" : "0001-12-31T00:00:00.000Z"
+            },
+            "gCal_anyoneCanAddSelf" : {
+               "value" : "false"
+            },
+            "title" : {
+               "value" : "Beyond JavaScript: Programming the web with Native Client",
+               "type" : "text"
+            }
+         },
+         {
+            "gCal_guestsCanModify" : {
+               "value" : "false"
+            },
+            "gCal_guestsCanInviteOthers" : {
+               "value" : "true"
+            },
+            "gd_who" : [
+               {
+                  "rel" : "http://schemas.google.com/g/2005#event.organizer",
+                  "email" : "developer-calendar@google.com",
+                  "valueString" : "developer-calendar@google.com"
+               }
+            ],
+            "gd_comments" : {
+               "gd_feedLink" : {
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/gvfo1i85r36rui3ukecch938vg/comments"
+               }
+            },
+            "content" : {
+               "value" : "Speaker(s): Reto Meier, Roman Nurik\nTopic(s): Android\nURL(s): http://www.droidcon.co.uk/\n\nDescription: \nA two day barcamp and conference exploring all aspects of developing for Android mobile devices. Thursday is the barcamp, Friday is the conference day with tracks covering Development, Business, Design and valuable SDKs & APIs.",
+               "type" : "text"
+            },
+            "gd_where" : [
+               {
+                  "valueString" : "52 Upper Street, Islington, London, N1 0QH"
+               }
+            ],
+            "author" : [
+               {
+                  "email" : {
+                     "value" : "developer-calendar@google.com"
+                  },
+                  "name" : {
+                     "value" : "Google Developer Calendar"
+                  }
+               }
+            ],
+            "gCal_uid" : {
+               "value" : "gvfo1i85r36rui3ukecch938vg@google.com"
+            },
+            "gd_eventStatus" : {
+               "value" : "http://schemas.google.com/g/2005#event.confirmed"
+            },
+            "gCal_sequence" : {
+               "value" : 0
+            },
+            "id" : {
+               "value" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/gvfo1i85r36rui3ukecch938vg"
+            },
+            "updated" : {
+               "value" : "2010-10-22T11:20:51.000Z"
+            },
+            "category" : [
+               {
+                  "scheme" : "http://schemas.google.com/g/2005#kind",
+                  "term" : "http://schemas.google.com/g/2005#event"
+               }
+            ],
+            "link" : [
+               {
+                  "rel" : "alternate",
+                  "href" : "http://www.google.com/calendar/event?eid=Z3ZmbzFpODVyMzZydWkzdWtlY2NoOTM4dmcgZGV2ZWxvcGVyLWNhbGVuZGFyQGdvb2dsZS5jb20",
+                  "title" : "alternate",
+                  "type" : "text/html"
+               },
+               {
+                  "rel" : "self",
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/gvfo1i85r36rui3ukecch938vg",
+                  "type" : "application/atom+xml"
+               }
+            ],
+            "gCal_guestsCanSeeGuests" : {
+               "value" : "true"
+            },
+            "gd_when" : [
+               {
+                  "endTime" : "2010-10-29T14:00:00.000-07:00",
+                  "startTime" : "2010-10-29T01:00:00.000-07:00"
+               }
+            ],
+            "gd_transparency" : {
+               "value" : "http://schemas.google.com/g/2005#event.opaque"
+            },
+            "published" : {
+               "value" : "0001-12-31T00:00:00.000Z"
+            },
+            "gCal_anyoneCanAddSelf" : {
+               "value" : "false"
+            },
+            "title" : {
+               "value" : "DroidCon London",
+               "type" : "text"
+            }
+         },
+         {
+            "gCal_guestsCanModify" : {
+               "value" : "false"
+            },
+            "gCal_guestsCanInviteOthers" : {
+               "value" : "true"
+            },
+            "gd_who" : [
+               {
+                  "rel" : "http://schemas.google.com/g/2005#event.organizer",
+                  "email" : "developer-calendar@google.com",
+                  "gd_attendeeStatus" : {
+                     "value" : "http://schemas.google.com/g/2005#event.invited"
+                  },
+                  "valueString" : "Google Developer Calendar"
+               }
+            ],
+            "gd_comments" : {
+               "gd_feedLink" : {
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/6agkk9og1k2n9e3salshvqjhn0/comments"
+               }
+            },
+            "content" : {
+               "value" : "Topic: Geo\n\nLocation:\nMirbis Institute \nMarksitskaia Street\nBldg 34 camp 7\nMoscow, Russia\n\nAuditorium 305",
+               "type" : "text"
+            },
+            "gd_where" : [
+               {
+                  "valueString" : "Mirbis Institute"
+               }
+            ],
+            "author" : [
+               {
+                  "email" : {
+                     "value" : "developer-calendar@google.com"
+                  },
+                  "name" : {
+                     "value" : "Google Developer Calendar"
+                  }
+               }
+            ],
+            "gCal_uid" : {
+               "value" : "6agkk9og1k2n9e3salshvqjhn0@google.com"
+            },
+            "gd_eventStatus" : {
+               "value" : "http://schemas.google.com/g/2005#event.confirmed"
+            },
+            "gCal_sequence" : {
+               "value" : 0
+            },
+            "id" : {
+               "value" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/6agkk9og1k2n9e3salshvqjhn0"
+            },
+            "updated" : {
+               "value" : "2010-10-21T23:12:44.000Z"
+            },
+            "category" : [
+               {
+                  "scheme" : "http://schemas.google.com/g/2005#kind",
+                  "term" : "http://schemas.google.com/g/2005#event"
+               }
+            ],
+            "link" : [
+               {
+                  "rel" : "alternate",
+                  "href" : "http://www.google.com/calendar/event?eid=NmFna2s5b2cxazJuOWUzc2Fsc2h2cWpobjAgZGV2ZWxvcGVyLWNhbGVuZGFyQGdvb2dsZS5jb20",
+                  "title" : "alternate",
+                  "type" : "text/html"
+               },
+               {
+                  "rel" : "self",
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/6agkk9og1k2n9e3salshvqjhn0",
+                  "type" : "application/atom+xml"
+               }
+            ],
+            "gCal_guestsCanSeeGuests" : {
+               "value" : "true"
+            },
+            "gd_when" : [
+               {
+                  "endTime" : "2010-11-13T07:00:00.000-08:00",
+                  "startTime" : "2010-11-12T23:00:00.000-08:00"
+               }
+            ],
+            "gd_transparency" : {
+               "value" : "http://schemas.google.com/g/2005#event.opaque"
+            },
+            "published" : {
+               "value" : "2010-10-21T23:12:00.000Z"
+            },
+            "gCal_anyoneCanAddSelf" : {
+               "value" : "false"
+            },
+            "title" : {
+               "value" : "GDD Hackathon - Moscow",
+               "type" : "text"
+            }
+         },
+         {
+            "gCal_guestsCanModify" : {
+               "value" : "false"
+            },
+            "gCal_guestsCanInviteOthers" : {
+               "value" : "true"
+            },
+            "gd_who" : [
+               {
+                  "rel" : "http://schemas.google.com/g/2005#event.organizer",
+                  "email" : "developer-calendar@google.com",
+                  "valueString" : "developer-calendar@google.com"
+               }
+            ],
+            "gd_comments" : {
+               "gd_feedLink" : {
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/bjgc2vi8vu2gueta8ortfrha6g/comments"
+               }
+            },
+            "content" : {
+               "value" : "A week dedicated to discussing the Wave protocol and open-source technology.\n\nMore info here:\nhttp://www.waveprotocol.org/wave-protocol-summit",
+               "type" : "text"
+            },
+            "gd_where" : [
+               {
+                  "valueString" : "Google San Francisco Office, Folsom and Spears St, San Francisco"
+               }
+            ],
+            "author" : [
+               {
+                  "email" : {
+                     "value" : "developer-calendar@google.com"
+                  },
+                  "name" : {
+                     "value" : "Google Developer Calendar"
+                  }
+               }
+            ],
+            "gCal_uid" : {
+               "value" : "bjgc2vi8vu2gueta8ortfrha6g@google.com"
+            },
+            "gd_eventStatus" : {
+               "value" : "http://schemas.google.com/g/2005#event.confirmed"
+            },
+            "gCal_sequence" : {
+               "value" : 0
+            },
+            "id" : {
+               "value" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/bjgc2vi8vu2gueta8ortfrha6g"
+            },
+            "updated" : {
+               "value" : "2010-10-21T21:56:36.000Z"
+            },
+            "category" : [
+               {
+                  "scheme" : "http://schemas.google.com/g/2005#kind",
+                  "term" : "http://schemas.google.com/g/2005#event"
+               }
+            ],
+            "link" : [
+               {
+                  "rel" : "alternate",
+                  "href" : "http://www.google.com/calendar/event?eid=YmpnYzJ2aTh2dTJndWV0YThvcnRmcmhhNmcgZGV2ZWxvcGVyLWNhbGVuZGFyQGdvb2dsZS5jb20",
+                  "title" : "alternate",
+                  "type" : "text/html"
+               },
+               {
+                  "rel" : "self",
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/bjgc2vi8vu2gueta8ortfrha6g",
+                  "type" : "application/atom+xml"
+               }
+            ],
+            "gCal_guestsCanSeeGuests" : {
+               "value" : "true"
+            },
+            "gd_when" : [
+               {
+                  "endTime" : "2010-11-14",
+                  "startTime" : "2010-11-09"
+               }
+            ],
+            "gd_transparency" : {
+               "value" : "http://schemas.google.com/g/2005#event.transparent"
+            },
+            "published" : {
+               "value" : "2010-10-21T21:56:36.000Z"
+            },
+            "gCal_anyoneCanAddSelf" : {
+               "value" : "false"
+            },
+            "title" : {
+               "value" : "Wave Protocol Summit",
+               "type" : "text"
+            }
+         },
+         {
+            "gCal_guestsCanModify" : {
+               "value" : "false"
+            },
+            "gCal_guestsCanInviteOthers" : {
+               "value" : "true"
+            },
+            "gd_who" : [
+               {
+                  "rel" : "http://schemas.google.com/g/2005#event.organizer",
+                  "email" : "developer-calendar@google.com",
+                  "gd_attendeeStatus" : {
+                     "value" : "http://schemas.google.com/g/2005#event.accepted"
+                  },
+                  "valueString" : "developer-calendar@google.com"
+               }
+            ],
+            "gd_comments" : {
+               "gd_feedLink" : {
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/fujppf0tlekhrqeg5cpms9uaag/comments"
+               }
+            },
+            "content" : {
+               "value" : "2nd International ICST Conference on \nMobile Computing, Applications, and Services\n\nYouTube Direct Demo Session : User-Generated Content Platform, Mobile Applications and API Overview\n4:00-6:00pm\nSpeaker : Jarek Wilkiewicz\nTopic : YouTube API, YouTube Direct\nMore information : http://www.mobicase.org/demos_posters.shtml",
+               "type" : "text"
+            },
+            "gd_where" : [
+               {
+                  "valueString" : "Biltmore Hotel & Suites, Santa Clara, CA, USA"
+               }
+            ],
+            "author" : [
+               {
+                  "email" : {
+                     "value" : "developer-calendar@google.com"
+                  },
+                  "name" : {
+                     "value" : "Google Developer Calendar"
+                  }
+               }
+            ],
+            "gCal_uid" : {
+               "value" : "fujppf0tlekhrqeg5cpms9uaag@google.com"
+            },
+            "gd_eventStatus" : {
+               "value" : "http://schemas.google.com/g/2005#event.confirmed"
+            },
+            "gCal_sequence" : {
+               "value" : 0
+            },
+            "id" : {
+               "value" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/fujppf0tlekhrqeg5cpms9uaag"
+            },
+            "updated" : {
+               "value" : "2010-10-21T20:37:08.000Z"
+            },
+            "category" : [
+               {
+                  "scheme" : "http://schemas.google.com/g/2005#kind",
+                  "term" : "http://schemas.google.com/g/2005#event"
+               }
+            ],
+            "link" : [
+               {
+                  "rel" : "alternate",
+                  "href" : "http://www.google.com/calendar/event?eid=ZnVqcHBmMHRsZWtocnFlZzVjcG1zOXVhYWcgZGV2ZWxvcGVyLWNhbGVuZGFyQGdvb2dsZS5jb20",
+                  "title" : "alternate",
+                  "type" : "text/html"
+               },
+               {
+                  "rel" : "self",
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/fujppf0tlekhrqeg5cpms9uaag",
+                  "type" : "application/atom+xml"
+               }
+            ],
+            "gCal_guestsCanSeeGuests" : {
+               "value" : "true"
+            },
+            "gd_when" : [
+               {
+                  "endTime" : "2010-10-26T18:00:00.000-07:00",
+                  "startTime" : "2010-10-26T16:00:00.000-07:00"
+               }
+            ],
+            "gd_transparency" : {
+               "value" : "http://schemas.google.com/g/2005#event.opaque"
+            },
+            "published" : {
+               "value" : "2010-10-21T17:45:30.000Z"
+            },
+            "gCal_anyoneCanAddSelf" : {
+               "value" : "false"
+            },
+            "title" : {
+               "value" : "MobiCASE 2010",
+               "type" : "text"
+            }
+         },
+         {
+            "gCal_guestsCanModify" : {
+               "value" : "false"
+            },
+            "gCal_guestsCanInviteOthers" : {
+               "value" : "true"
+            },
+            "gd_who" : [
+               {
+                  "rel" : "http://schemas.google.com/g/2005#event.organizer",
+                  "email" : "developer-calendar@google.com",
+                  "valueString" : "developer-calendar@google.com"
+               }
+            ],
+            "gd_comments" : {
+               "gd_feedLink" : {
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/rljj81qtdjg3pv0est3i6mdfvc/comments"
+               }
+            },
+            "content" : {
+               "value" : "Jeanine Swatton\n415.408.8260",
+               "type" : "text"
+            },
+            "gd_where" : [
+               {
+                  "valueString" : "Wildfire Interactive, Inc. 167 Hamilton Ave Palo Alto, CA 94301"
+               }
+            ],
+            "author" : [
+               {
+                  "email" : {
+                     "value" : "developer-calendar@google.com"
+                  },
+                  "name" : {
+                     "value" : "Google Developer Calendar"
+                  }
+               }
+            ],
+            "gCal_uid" : {
+               "value" : "rljj81qtdjg3pv0est3i6mdfvc@google.com"
+            },
+            "gd_eventStatus" : {
+               "value" : "http://schemas.google.com/g/2005#event.confirmed"
+            },
+            "gCal_sequence" : {
+               "value" : 0
+            },
+            "id" : {
+               "value" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/rljj81qtdjg3pv0est3i6mdfvc"
+            },
+            "updated" : {
+               "value" : "2010-10-21T19:37:16.000Z"
+            },
+            "category" : [
+               {
+                  "scheme" : "http://schemas.google.com/g/2005#kind",
+                  "term" : "http://schemas.google.com/g/2005#event"
+               }
+            ],
+            "link" : [
+               {
+                  "rel" : "alternate",
+                  "href" : "http://www.google.com/calendar/event?eid=cmxqajgxcXRkamczcHYwZXN0M2k2bWRmdmMgZGV2ZWxvcGVyLWNhbGVuZGFyQGdvb2dsZS5jb20",
+                  "title" : "alternate",
+                  "type" : "text/html"
+               },
+               {
+                  "rel" : "self",
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/rljj81qtdjg3pv0est3i6mdfvc",
+                  "type" : "application/atom+xml"
+               }
+            ],
+            "gCal_guestsCanSeeGuests" : {
+               "value" : "true"
+            },
+            "gd_when" : [
+               {
+                  "endTime" : "2010-11-10T20:00:00.000-08:00",
+                  "startTime" : "2010-11-10T18:00:00.000-08:00"
+               }
+            ],
+            "gd_transparency" : {
+               "value" : "http://schemas.google.com/g/2005#event.opaque"
+            },
+            "published" : {
+               "value" : "2010-10-21T19:37:16.000Z"
+            },
+            "gCal_anyoneCanAddSelf" : {
+               "value" : "false"
+            },
+            "title" : {
+               "value" : "Ruby on Rails and HTML5 Talk",
+               "type" : "text"
+            }
+         },
+         {
+            "gCal_guestsCanModify" : {
+               "value" : "false"
+            },
+            "gCal_guestsCanInviteOthers" : {
+               "value" : "true"
+            },
+            "gd_who" : [
+               {
+                  "rel" : "http://schemas.google.com/g/2005#event.organizer",
+                  "email" : "developer-calendar@google.com",
+                  "valueString" : "developer-calendar@google.com"
+               }
+            ],
+            "gd_comments" : {
+               "gd_feedLink" : {
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/brj10ak866mb0spp7mv26m2ajs/comments"
+               }
+            },
+            "content" : {
+               "value" : "",
+               "type" : "text"
+            },
+            "gd_where" : [
+               {
+                  "valueString" : "Prague, Czech Republic"
+               }
+            ],
+            "author" : [
+               {
+                  "email" : {
+                     "value" : "developer-calendar@google.com"
+                  },
+                  "name" : {
+                     "value" : "Google Developer Calendar"
+                  }
+               }
+            ],
+            "gCal_uid" : {
+               "value" : "brj10ak866mb0spp7mv26m2ajs@google.com"
+            },
+            "gd_eventStatus" : {
+               "value" : "http://schemas.google.com/g/2005#event.confirmed"
+            },
+            "gCal_sequence" : {
+               "value" : 0
+            },
+            "id" : {
+               "value" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/brj10ak866mb0spp7mv26m2ajs"
+            },
+            "updated" : {
+               "value" : "2010-10-21T18:56:10.000Z"
+            },
+            "category" : [
+               {
+                  "scheme" : "http://schemas.google.com/g/2005#kind",
+                  "term" : "http://schemas.google.com/g/2005#event"
+               }
+            ],
+            "link" : [
+               {
+                  "rel" : "alternate",
+                  "href" : "http://www.google.com/calendar/event?eid=YnJqMTBhazg2Nm1iMHNwcDdtdjI2bTJhanMgZGV2ZWxvcGVyLWNhbGVuZGFyQGdvb2dsZS5jb20",
+                  "title" : "alternate",
+                  "type" : "text/html"
+               },
+               {
+                  "rel" : "self",
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/brj10ak866mb0spp7mv26m2ajs",
+                  "type" : "application/atom+xml"
+               }
+            ],
+            "gCal_guestsCanSeeGuests" : {
+               "value" : "true"
+            },
+            "gd_when" : [
+               {
+                  "endTime" : "2010-11-16",
+                  "startTime" : "2010-11-15"
+               }
+            ],
+            "gd_transparency" : {
+               "value" : "http://schemas.google.com/g/2005#event.transparent"
+            },
+            "published" : {
+               "value" : "2010-10-21T05:50:01.000Z"
+            },
+            "gCal_anyoneCanAddSelf" : {
+               "value" : "false"
+            },
+            "title" : {
+               "value" : "Pre-GDD Hackathon - Prague",
+               "type" : "text"
+            }
+         },
+         {
+            "gCal_guestsCanModify" : {
+               "value" : "false"
+            },
+            "gCal_guestsCanInviteOthers" : {
+               "value" : "true"
+            },
+            "gd_who" : [
+               {
+                  "rel" : "http://schemas.google.com/g/2005#event.organizer",
+                  "email" : "developer-calendar@google.com",
+                  "valueString" : "developer-calendar@google.com"
+               }
+            ],
+            "gd_comments" : {
+               "gd_feedLink" : {
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/narvjlf1reohem82ii5a32nqv8/comments"
+               }
+            },
+            "content" : {
+               "value" : "",
+               "type" : "text"
+            },
+            "gd_where" : [
+               {
+                  "valueString" : "Munich, Germany"
+               }
+            ],
+            "author" : [
+               {
+                  "email" : {
+                     "value" : "developer-calendar@google.com"
+                  },
+                  "name" : {
+                     "value" : "Google Developer Calendar"
+                  }
+               }
+            ],
+            "gCal_uid" : {
+               "value" : "narvjlf1reohem82ii5a32nqv8@google.com"
+            },
+            "gd_eventStatus" : {
+               "value" : "http://schemas.google.com/g/2005#event.confirmed"
+            },
+            "gCal_sequence" : {
+               "value" : 0
+            },
+            "id" : {
+               "value" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/narvjlf1reohem82ii5a32nqv8"
+            },
+            "updated" : {
+               "value" : "2010-10-21T18:55:49.000Z"
+            },
+            "category" : [
+               {
+                  "scheme" : "http://schemas.google.com/g/2005#kind",
+                  "term" : "http://schemas.google.com/g/2005#event"
+               }
+            ],
+            "link" : [
+               {
+                  "rel" : "alternate",
+                  "href" : "http://www.google.com/calendar/event?eid=bmFydmpsZjFyZW9oZW04MmlpNWEzMm5xdjggZGV2ZWxvcGVyLWNhbGVuZGFyQGdvb2dsZS5jb20",
+                  "title" : "alternate",
+                  "type" : "text/html"
+               },
+               {
+                  "rel" : "self",
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/narvjlf1reohem82ii5a32nqv8",
+                  "type" : "application/atom+xml"
+               }
+            ],
+            "gCal_guestsCanSeeGuests" : {
+               "value" : "true"
+            },
+            "gd_when" : [
+               {
+                  "endTime" : "2010-11-09",
+                  "startTime" : "2010-11-07"
+               }
+            ],
+            "gd_transparency" : {
+               "value" : "http://schemas.google.com/g/2005#event.transparent"
+            },
+            "published" : {
+               "value" : "2010-10-21T05:50:44.000Z"
+            },
+            "gCal_anyoneCanAddSelf" : {
+               "value" : "false"
+            },
+            "title" : {
+               "value" : "Pre-GDD Hackathon - Munich",
+               "type" : "text"
+            }
+         },
+         {
+            "gCal_guestsCanModify" : {
+               "value" : "false"
+            },
+            "gCal_guestsCanInviteOthers" : {
+               "value" : "true"
+            },
+            "gd_who" : [
+               {
+                  "rel" : "http://schemas.google.com/g/2005#event.organizer",
+                  "email" : "developer-calendar@google.com",
+                  "valueString" : "developer-calendar@google.com"
+               }
+            ],
+            "gd_comments" : {
+               "gd_feedLink" : {
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/uuc8fre7vu1e0c63h3n47akofg/comments"
+               }
+            },
+            "content" : {
+               "value" : "A 1-day-long event for Android developers to learn from Googlers Ken Liu, Tony Chan, and Bill Luan about making high quality, performant Android apps.\n\nRegister here:\nhttp://www.sydney-gtug.org/",
+               "type" : "text"
+            },
+            "gd_where" : [
+               {
+                  "valueString" : "Google Sydney, 48 Pirrama Rd, Pyrmont NSW 2009"
+               }
+            ],
+            "author" : [
+               {
+                  "email" : {
+                     "value" : "developer-calendar@google.com"
+                  },
+                  "name" : {
+                     "value" : "Google Developer Calendar"
+                  }
+               }
+            ],
+            "gCal_uid" : {
+               "value" : "uuc8fre7vu1e0c63h3n47akofg@google.com"
+            },
+            "gd_eventStatus" : {
+               "value" : "http://schemas.google.com/g/2005#event.confirmed"
+            },
+            "gCal_sequence" : {
+               "value" : 0
+            },
+            "id" : {
+               "value" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/uuc8fre7vu1e0c63h3n47akofg"
+            },
+            "updated" : {
+               "value" : "2010-10-21T18:55:21.000Z"
+            },
+            "category" : [
+               {
+                  "scheme" : "http://schemas.google.com/g/2005#kind",
+                  "term" : "http://schemas.google.com/g/2005#event"
+               }
+            ],
+            "link" : [
+               {
+                  "rel" : "alternate",
+                  "href" : "http://www.google.com/calendar/event?eid=dXVjOGZyZTd2dTFlMGM2M2gzbjQ3YWtvZmcgZGV2ZWxvcGVyLWNhbGVuZGFyQGdvb2dsZS5jb20",
+                  "title" : "alternate",
+                  "type" : "text/html"
+               },
+               {
+                  "rel" : "self",
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/uuc8fre7vu1e0c63h3n47akofg",
+                  "type" : "application/atom+xml"
+               }
+            ],
+            "gCal_guestsCanSeeGuests" : {
+               "value" : "true"
+            },
+            "gd_when" : [
+               {
+                  "endTime" : "2010-11-05T00:30:00.000-07:00",
+                  "startTime" : "2010-11-04T16:00:00.000-07:00"
+               }
+            ],
+            "gd_transparency" : {
+               "value" : "http://schemas.google.com/g/2005#event.opaque"
+            },
+            "published" : {
+               "value" : "2010-10-20T23:48:54.000Z"
+            },
+            "gCal_anyoneCanAddSelf" : {
+               "value" : "false"
+            },
+            "title" : {
+               "value" : "Android Developer Lab - Sydney",
+               "type" : "text"
+            }
+         },
+         {
+            "gCal_guestsCanModify" : {
+               "value" : "false"
+            },
+            "gCal_guestsCanInviteOthers" : {
+               "value" : "true"
+            },
+            "gd_who" : [
+               {
+                  "rel" : "http://schemas.google.com/g/2005#event.organizer",
+                  "email" : "developer-calendar@google.com",
+                  "valueString" : "Google Developer Calendar"
+               }
+            ],
+            "gd_comments" : {
+               "gd_feedLink" : {
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/3oe7btto7jhg5q6dg20o6ghre0/comments"
+               }
+            },
+            "content" : {
+               "value" : "Speaker(s): Reto Meier, Justin Mattson, Roman Nurik\nTopic(s): Android\nURL: https://sites.google.com/site/stockholmgtug/adl1811-2010\nDescription:\n\nAndroid Developer Lab ledd av Google\n\nHa med egen laptop.\n\nDock kommer det att finnas en mini-mässa med Android-hårdvara. (Om du har en produkt som använder Android och vill visa upp den, hör av dig till psvensson@gmail.com)\n\nTopics:\n\nFirst talk: Android opportunity for developers + Android market overview\nBreakout sessions/workshops on;  Getting started with Android, Android UI Elements, Resources for Android game development, Using intents and providers effectively, cloud to devices messaging.\nLast talk: Future of the Android platform\n\nAll talks and workshops will be in English",
+               "type" : "text"
+            },
+            "gd_where" : [
+               {
+                  "valueString" : "Klarabergsviadukten 82, Stockholm, Sweden"
+               }
+            ],
+            "author" : [
+               {
+                  "email" : {
+                     "value" : "developer-calendar@google.com"
+                  },
+                  "name" : {
+                     "value" : "Google Developer Calendar"
+                  }
+               }
+            ],
+            "gCal_uid" : {
+               "value" : "3oe7btto7jhg5q6dg20o6ghre0@google.com"
+            },
+            "gd_eventStatus" : {
+               "value" : "http://schemas.google.com/g/2005#event.confirmed"
+            },
+            "gCal_sequence" : {
+               "value" : 0
+            },
+            "id" : {
+               "value" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/3oe7btto7jhg5q6dg20o6ghre0"
+            },
+            "updated" : {
+               "value" : "2010-10-21T18:02:04.000Z"
+            },
+            "category" : [
+               {
+                  "scheme" : "http://schemas.google.com/g/2005#kind",
+                  "term" : "http://schemas.google.com/g/2005#event"
+               }
+            ],
+            "link" : [
+               {
+                  "rel" : "alternate",
+                  "href" : "http://www.google.com/calendar/event?eid=M29lN2J0dG83amhnNXE2ZGcyMG82Z2hyZTAgZGV2ZWxvcGVyLWNhbGVuZGFyQGdvb2dsZS5jb20",
+                  "title" : "alternate",
+                  "type" : "text/html"
+               },
+               {
+                  "rel" : "self",
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/3oe7btto7jhg5q6dg20o6ghre0",
+                  "type" : "application/atom+xml"
+               }
+            ],
+            "gCal_guestsCanSeeGuests" : {
+               "value" : "true"
+            },
+            "gd_when" : [
+               {
+                  "endTime" : "2010-11-18T11:00:00.000-08:00",
+                  "startTime" : "2010-11-18T07:00:00.000-08:00"
+               }
+            ],
+            "gd_transparency" : {
+               "value" : "http://schemas.google.com/g/2005#event.opaque"
+            },
+            "published" : {
+               "value" : "2010-10-21T00:35:01.000Z"
+            },
+            "gCal_anyoneCanAddSelf" : {
+               "value" : "false"
+            },
+            "title" : {
+               "value" : "Android Developer Lab - Stockholm",
+               "type" : "text"
+            }
+         },
+         {
+            "gCal_guestsCanModify" : {
+               "value" : "false"
+            },
+            "gCal_guestsCanInviteOthers" : {
+               "value" : "true"
+            },
+            "gd_who" : [
+               {
+                  "rel" : "http://schemas.google.com/g/2005#event.organizer",
+                  "email" : "developer-calendar@google.com",
+                  "valueString" : "developer-calendar@google.com"
+               }
+            ],
+            "gd_comments" : {
+               "gd_feedLink" : {
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/age11ushi61bh41u8clh9pukqc/comments"
+               }
+            },
+            "content" : {
+               "value" : "A kick-off event for the NZ Mix & Mash data mashup competition, featuring main speakers Pamela Fox and Mike Hodgson, plus a great set of shorter talks.\n\nMore info here:\nhttp://www.webstock.org.nz/upcoming/mini-nov10.php",
+               "type" : "text"
+            },
+            "gd_where" : [
+               {
+                  "valueString" : "Wellington, NZ"
+               }
+            ],
+            "author" : [
+               {
+                  "email" : {
+                     "value" : "developer-calendar@google.com"
+                  },
+                  "name" : {
+                     "value" : "Google Developer Calendar"
+                  }
+               }
+            ],
+            "gCal_uid" : {
+               "value" : "age11ushi61bh41u8clh9pukqc@google.com"
+            },
+            "gd_eventStatus" : {
+               "value" : "http://schemas.google.com/g/2005#event.confirmed"
+            },
+            "gCal_sequence" : {
+               "value" : 0
+            },
+            "id" : {
+               "value" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/age11ushi61bh41u8clh9pukqc"
+            },
+            "updated" : {
+               "value" : "2010-10-20T23:59:15.000Z"
+            },
+            "category" : [
+               {
+                  "scheme" : "http://schemas.google.com/g/2005#kind",
+                  "term" : "http://schemas.google.com/g/2005#event"
+               }
+            ],
+            "link" : [
+               {
+                  "rel" : "alternate",
+                  "href" : "http://www.google.com/calendar/event?eid=YWdlMTF1c2hpNjFiaDQxdThjbGg5cHVrcWMgZGV2ZWxvcGVyLWNhbGVuZGFyQGdvb2dsZS5jb20",
+                  "title" : "alternate",
+                  "type" : "text/html"
+               },
+               {
+                  "rel" : "self",
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/age11ushi61bh41u8clh9pukqc",
+                  "type" : "application/atom+xml"
+               }
+            ],
+            "gCal_guestsCanSeeGuests" : {
+               "value" : "true"
+            },
+            "gd_when" : [
+               {
+                  "endTime" : "2010-11-03T02:30:00.000-07:00",
+                  "startTime" : "2010-11-03T00:30:00.000-07:00"
+               }
+            ],
+            "gd_transparency" : {
+               "value" : "http://schemas.google.com/g/2005#event.opaque"
+            },
+            "published" : {
+               "value" : "2010-10-20T23:59:15.000Z"
+            },
+            "gCal_anyoneCanAddSelf" : {
+               "value" : "false"
+            },
+            "title" : {
+               "value" : "NZ Mix & Mash Mini",
+               "type" : "text"
+            }
+         },
+         {
+            "gCal_guestsCanModify" : {
+               "value" : "false"
+            },
+            "gCal_guestsCanInviteOthers" : {
+               "value" : "true"
+            },
+            "gd_who" : [
+               {
+                  "rel" : "http://schemas.google.com/g/2005#event.organizer",
+                  "email" : "developer-calendar@google.com",
+                  "valueString" : "Google Developer Calendar"
+               }
+            ],
+            "gd_comments" : {
+               "gd_feedLink" : {
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/mfc825f5gqgqoqcpr7dj9i3ns8/comments"
+               }
+            },
+            "content" : {
+               "value" : "Google developer advocates Tony Chan, Ken Liu, and Bill Luan will give an overview of the Android SDK and ecosystem.\n\nMore info here: http://www.sydney-gtug.org/",
+               "type" : "text"
+            },
+            "gd_where" : [
+               {
+                  "valueString" : "Google Sydney, 48 Pirrama Rd, Pyrmont NSW 2009"
+               }
+            ],
+            "author" : [
+               {
+                  "email" : {
+                     "value" : "developer-calendar@google.com"
+                  },
+                  "name" : {
+                     "value" : "Google Developer Calendar"
+                  }
+               }
+            ],
+            "gCal_uid" : {
+               "value" : "mfc825f5gqgqoqcpr7dj9i3ns8@google.com"
+            },
+            "gd_eventStatus" : {
+               "value" : "http://schemas.google.com/g/2005#event.confirmed"
+            },
+            "gCal_sequence" : {
+               "value" : 0
+            },
+            "id" : {
+               "value" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/mfc825f5gqgqoqcpr7dj9i3ns8"
+            },
+            "updated" : {
+               "value" : "2010-10-20T23:47:57.000Z"
+            },
+            "category" : [
+               {
+                  "scheme" : "http://schemas.google.com/g/2005#kind",
+                  "term" : "http://schemas.google.com/g/2005#event"
+               }
+            ],
+            "link" : [
+               {
+                  "rel" : "alternate",
+                  "href" : "http://www.google.com/calendar/event?eid=bWZjODI1ZjVncWdxb3FjcHI3ZGo5aTNuczggZGV2ZWxvcGVyLWNhbGVuZGFyQGdvb2dsZS5jb20",
+                  "title" : "alternate",
+                  "type" : "text/html"
+               },
+               {
+                  "rel" : "self",
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/mfc825f5gqgqoqcpr7dj9i3ns8",
+                  "type" : "application/atom+xml"
+               }
+            ],
+            "gCal_guestsCanSeeGuests" : {
+               "value" : "true"
+            },
+            "gd_when" : [
+               {
+                  "endTime" : "2010-11-03T03:00:00.000-07:00",
+                  "startTime" : "2010-11-03T00:00:00.000-07:00"
+               }
+            ],
+            "gd_transparency" : {
+               "value" : "http://schemas.google.com/g/2005#event.opaque"
+            },
+            "published" : {
+               "value" : "2010-10-20T23:46:24.000Z"
+            },
+            "gCal_anyoneCanAddSelf" : {
+               "value" : "false"
+            },
+            "title" : {
+               "value" : "Sydney GTUG Android 101 Night",
+               "type" : "text"
+            }
+         },
+         {
+            "gCal_guestsCanModify" : {
+               "value" : "false"
+            },
+            "gCal_guestsCanInviteOthers" : {
+               "value" : "true"
+            },
+            "gd_who" : [
+               {
+                  "rel" : "http://schemas.google.com/g/2005#event.organizer",
+                  "email" : "developer-calendar@google.com",
+                  "valueString" : "developer-calendar@google.com"
+               }
+            ],
+            "gd_comments" : {
+               "gd_feedLink" : {
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/kqi8vo9cbm4n9o6t0ks5diq45c/comments"
+               }
+            },
+            "content" : {
+               "value" : "Google Developer Days are a chance to learn about Google developer products and meet the engineers who work on them. These one-day events will include seminars on mobile and web technologies including Android, HTML5, Chrome, App Engine, Google Web Toolkit and more.\n\nSpeaker(s): Billy Rutledge, Chris Ramsdale, Don Dodge, Eric Bidelman, Eric Tholome, Ernest Delgado, Fred Chung, Mario Queiroz, Ossama Alami, Patrick Chanezon, Ryan Boyd, Tim Bray\nTopic(s): Android, HTML5, Chrome, App Engine, GWT\nURL: http://www.google.com/events/developerday/2010/sao-paulo/",
+               "type" : "text"
+            },
+            "gd_where" : [
+               {
+                  "valueString" : "Avenida das Nações Unidas, 12551 São Paulo - SP, 04578-903"
+               }
+            ],
+            "author" : [
+               {
+                  "email" : {
+                     "value" : "developer-calendar@google.com"
+                  },
+                  "name" : {
+                     "value" : "Google Developer Calendar"
+                  }
+               }
+            ],
+            "gCal_uid" : {
+               "value" : "kqi8vo9cbm4n9o6t0ks5diq45c@google.com"
+            },
+            "gd_eventStatus" : {
+               "value" : "http://schemas.google.com/g/2005#event.confirmed"
+            },
+            "gCal_sequence" : {
+               "value" : 0
+            },
+            "id" : {
+               "value" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/kqi8vo9cbm4n9o6t0ks5diq45c"
+            },
+            "updated" : {
+               "value" : "2010-10-20T01:05:12.000Z"
+            },
+            "category" : [
+               {
+                  "scheme" : "http://schemas.google.com/g/2005#kind",
+                  "term" : "http://schemas.google.com/g/2005#event"
+               }
+            ],
+            "link" : [
+               {
+                  "rel" : "alternate",
+                  "href" : "http://www.google.com/calendar/event?eid=a3FpOHZvOWNibTRuOW82dDBrczVkaXE0NWMgZGV2ZWxvcGVyLWNhbGVuZGFyQGdvb2dsZS5jb20",
+                  "title" : "alternate",
+                  "type" : "text/html"
+               },
+               {
+                  "rel" : "self",
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/kqi8vo9cbm4n9o6t0ks5diq45c",
+                  "type" : "application/atom+xml"
+               }
+            ],
+            "gCal_guestsCanSeeGuests" : {
+               "value" : "true"
+            },
+            "gd_when" : [
+               {
+                  "endTime" : "2010-10-29T03:00:00.000-07:00",
+                  "startTime" : "2010-10-28T17:00:00.000-07:00"
+               }
+            ],
+            "gd_transparency" : {
+               "value" : "http://schemas.google.com/g/2005#event.opaque"
+            },
+            "published" : {
+               "value" : "2010-07-13T20:58:51.000Z"
+            },
+            "gCal_anyoneCanAddSelf" : {
+               "value" : "false"
+            },
+            "title" : {
+               "value" : "Google Developer Day - Sao Paulo, Brazil",
+               "type" : "text"
+            }
+         },
+         {
+            "gCal_guestsCanModify" : {
+               "value" : "false"
+            },
+            "gCal_guestsCanInviteOthers" : {
+               "value" : "true"
+            },
+            "gd_who" : [
+               {
+                  "rel" : "http://schemas.google.com/g/2005#event.organizer",
+                  "email" : "developer-calendar@google.com",
+                  "valueString" : "Google Developer Calendar"
+               }
+            ],
+            "gd_comments" : {
+               "gd_feedLink" : {
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/erkl6mi2rsbrrfqaejt43iddq4/comments"
+               }
+            },
+            "content" : {
+               "value" : "For an hour, the Wave In a Box engineers will be on a wave to answer questions about the proposed next steps for open sourcing wave. We will post a link to the wave in the wave-protocol forum when it starts.",
+               "type" : "text"
+            },
+            "gd_where" : [
+               {
+                  "valueString" : "wave.google.com"
+               }
+            ],
+            "author" : [
+               {
+                  "email" : {
+                     "value" : "developer-calendar@google.com"
+                  },
+                  "name" : {
+                     "value" : "Google Developer Calendar"
+                  }
+               }
+            ],
+            "gCal_uid" : {
+               "value" : "erkl6mi2rsbrrfqaejt43iddq4@google.com"
+            },
+            "gd_eventStatus" : {
+               "value" : "http://schemas.google.com/g/2005#event.confirmed"
+            },
+            "gCal_sequence" : {
+               "value" : 0
+            },
+            "id" : {
+               "value" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/erkl6mi2rsbrrfqaejt43iddq4"
+            },
+            "updated" : {
+               "value" : "2010-10-13T06:31:29.000Z"
+            },
+            "category" : [
+               {
+                  "scheme" : "http://schemas.google.com/g/2005#kind",
+                  "term" : "http://schemas.google.com/g/2005#event"
+               }
+            ],
+            "link" : [
+               {
+                  "rel" : "alternate",
+                  "href" : "http://www.google.com/calendar/event?eid=ZXJrbDZtaTJyc2JycmZxYWVqdDQzaWRkcTQgZGV2ZWxvcGVyLWNhbGVuZGFyQGdvb2dsZS5jb20",
+                  "title" : "alternate",
+                  "type" : "text/html"
+               },
+               {
+                  "rel" : "self",
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/erkl6mi2rsbrrfqaejt43iddq4",
+                  "type" : "application/atom+xml"
+               }
+            ],
+            "gCal_guestsCanSeeGuests" : {
+               "value" : "true"
+            },
+            "gd_when" : [
+               {
+                  "endTime" : "2010-10-04T17:00:00.000-07:00",
+                  "startTime" : "2010-10-04T16:00:00.000-07:00"
+               }
+            ],
+            "gd_transparency" : {
+               "value" : "http://schemas.google.com/g/2005#event.opaque"
+            },
+            "published" : {
+               "value" : "2010-09-30T03:27:03.000Z"
+            },
+            "gCal_anyoneCanAddSelf" : {
+               "value" : "false"
+            },
+            "title" : {
+               "value" : "Wave in a Box Office Hours",
+               "type" : "text"
+            }
+         },
+         {
+            "gCal_guestsCanModify" : {
+               "value" : "false"
+            },
+            "gCal_guestsCanInviteOthers" : {
+               "value" : "true"
+            },
+            "gd_who" : [
+               {
+                  "rel" : "http://schemas.google.com/g/2005#event.organizer",
+                  "email" : "developer-calendar@google.com",
+                  "gd_attendeeStatus" : {
+                     "value" : "http://schemas.google.com/g/2005#event.accepted"
+                  },
+                  "valueString" : "developer-calendar@google.com"
+               }
+            ],
+            "gd_comments" : {
+               "gd_feedLink" : {
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/aa66um72tbogsvdnb1l4mj86u4/comments"
+               }
+            },
+            "content" : {
+               "value" : "For an hour, the Wave In a Box engineers will be on a wave to answer questions about the proposed next steps for open sourcing wave.\n\nYou can follow this wave to be notified in-wave when it happens, or subscribe to the wave-protocol forum list:\nhttps://wave.google.com/wave/waveref/googlewave.com/w+Zjz_XAIvF ",
+               "type" : "text"
+            },
+            "gd_where" : [
+               {
+                  "valueString" : "wave.google.com"
+               }
+            ],
+            "author" : [
+               {
+                  "email" : {
+                     "value" : "developer-calendar@google.com"
+                  },
+                  "name" : {
+                     "value" : "Google Developer Calendar"
+                  }
+               }
+            ],
+            "gCal_uid" : {
+               "value" : "aa66um72tbogsvdnb1l4mj86u4@google.com"
+            },
+            "gd_eventStatus" : {
+               "value" : "http://schemas.google.com/g/2005#event.confirmed"
+            },
+            "gCal_sequence" : {
+               "value" : 0
+            },
+            "id" : {
+               "value" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/aa66um72tbogsvdnb1l4mj86u4"
+            },
+            "updated" : {
+               "value" : "2010-10-13T06:31:29.000Z"
+            },
+            "category" : [
+               {
+                  "scheme" : "http://schemas.google.com/g/2005#kind",
+                  "term" : "http://schemas.google.com/g/2005#event"
+               }
+            ],
+            "link" : [
+               {
+                  "rel" : "alternate",
+                  "href" : "http://www.google.com/calendar/event?eid=YWE2NnVtNzJ0Ym9nc3ZkbmIxbDRtajg2dTQgZGV2ZWxvcGVyLWNhbGVuZGFyQGdvb2dsZS5jb20",
+                  "title" : "alternate",
+                  "type" : "text/html"
+               },
+               {
+                  "rel" : "self",
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/aa66um72tbogsvdnb1l4mj86u4",
+                  "type" : "application/atom+xml"
+               }
+            ],
+            "gCal_guestsCanSeeGuests" : {
+               "value" : "true"
+            },
+            "gd_when" : [
+               {
+                  "endTime" : "2010-09-15T18:00:00.000-07:00",
+                  "startTime" : "2010-09-15T17:00:00.000-07:00"
+               }
+            ],
+            "gd_transparency" : {
+               "value" : "http://schemas.google.com/g/2005#event.opaque"
+            },
+            "published" : {
+               "value" : "2010-09-08T08:10:10.000Z"
+            },
+            "gCal_anyoneCanAddSelf" : {
+               "value" : "false"
+            },
+            "title" : {
+               "value" : "Wave In A Box Office Hours",
+               "type" : "text"
+            }
+         },
+         {
+            "gCal_guestsCanModify" : {
+               "value" : "false"
+            },
+            "gCal_guestsCanInviteOthers" : {
+               "value" : "true"
+            },
+            "gd_who" : [
+               {
+                  "rel" : "http://schemas.google.com/g/2005#event.organizer",
+                  "email" : "developer-calendar@google.com",
+                  "valueString" : "developer-calendar@google.com"
+               }
+            ],
+            "gd_comments" : {
+               "gd_feedLink" : {
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/sst92ncluiuprvr4r49nemahl8/comments"
+               }
+            },
+            "content" : {
+               "value" : "5th annual Silicon Valley CodeCamp at Foothill College in Los Altos Hills, CA on I-280 south of Stanford University http://siliconvalley-codecamp.com. Google is a platinum sponsor, and there will be a full Google track on both days featuring speakers from the various product teams: http://www.siliconvalley-codecamp.com/Sessions.aspx?track=18",
+               "type" : "text"
+            },
+            "gd_where" : [
+               {
+                  "valueString" : ""
+               }
+            ],
+            "author" : [
+               {
+                  "email" : {
+                     "value" : "developer-calendar@google.com"
+                  },
+                  "name" : {
+                     "value" : "Google Developer Calendar"
+                  }
+               }
+            ],
+            "gCal_uid" : {
+               "value" : "sst92ncluiuprvr4r49nemahl8@google.com"
+            },
+            "gd_eventStatus" : {
+               "value" : "http://schemas.google.com/g/2005#event.confirmed"
+            },
+            "gCal_sequence" : {
+               "value" : 0
+            },
+            "id" : {
+               "value" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/sst92ncluiuprvr4r49nemahl8"
+            },
+            "updated" : {
+               "value" : "2010-10-13T06:31:29.000Z"
+            },
+            "category" : [
+               {
+                  "scheme" : "http://schemas.google.com/g/2005#kind",
+                  "term" : "http://schemas.google.com/g/2005#event"
+               }
+            ],
+            "link" : [
+               {
+                  "rel" : "alternate",
+                  "href" : "http://www.google.com/calendar/event?eid=c3N0OTJuY2x1aXVwcnZyNHI0OW5lbWFobDggZGV2ZWxvcGVyLWNhbGVuZGFyQGdvb2dsZS5jb20",
+                  "title" : "alternate",
+                  "type" : "text/html"
+               },
+               {
+                  "rel" : "self",
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/sst92ncluiuprvr4r49nemahl8",
+                  "type" : "application/atom+xml"
+               }
+            ],
+            "gCal_guestsCanSeeGuests" : {
+               "value" : "true"
+            },
+            "gd_when" : [
+               {
+                  "endTime" : "2010-10-10T15:30:00.000-07:00",
+                  "startTime" : "2010-10-10T09:15:00.000-07:00"
+               }
+            ],
+            "gd_transparency" : {
+               "value" : "http://schemas.google.com/g/2005#event.transparent"
+            },
+            "published" : {
+               "value" : "2010-10-02T05:40:18.000Z"
+            },
+            "gCal_anyoneCanAddSelf" : {
+               "value" : "false"
+            },
+            "title" : {
+               "value" : "Silicon Valley CodeCamp",
+               "type" : "text"
+            }
+         },
+         {
+            "gCal_guestsCanModify" : {
+               "value" : "false"
+            },
+            "gCal_guestsCanInviteOthers" : {
+               "value" : "true"
+            },
+            "gd_who" : [
+               {
+                  "rel" : "http://schemas.google.com/g/2005#event.organizer",
+                  "email" : "developer-calendar@google.com",
+                  "valueString" : "developer-calendar@google.com"
+               }
+            ],
+            "gd_comments" : {
+               "gd_feedLink" : {
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/84rrk1ok0h5kr1o6u5bkfrl4co/comments"
+               }
+            },
+            "content" : {
+               "value" : "5th annual Silicon Valley CodeCamp at Foothill College in Los Altos Hills, CA on I-280 south of Stanford University http://siliconvalley-codecamp.com. Google is a platinum sponsor, and there will be a full Google track on both days featuring speakers from the various product teams: http://www.siliconvalley-codecamp.com/Sessions.aspx?track=18",
+               "type" : "text"
+            },
+            "gd_where" : [
+               {
+                  "valueString" : ""
+               }
+            ],
+            "author" : [
+               {
+                  "email" : {
+                     "value" : "developer-calendar@google.com"
+                  },
+                  "name" : {
+                     "value" : "Google Developer Calendar"
+                  }
+               }
+            ],
+            "gCal_uid" : {
+               "value" : "84rrk1ok0h5kr1o6u5bkfrl4co@google.com"
+            },
+            "gd_eventStatus" : {
+               "value" : "http://schemas.google.com/g/2005#event.confirmed"
+            },
+            "gCal_sequence" : {
+               "value" : 0
+            },
+            "id" : {
+               "value" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/84rrk1ok0h5kr1o6u5bkfrl4co"
+            },
+            "updated" : {
+               "value" : "2010-10-13T06:31:29.000Z"
+            },
+            "category" : [
+               {
+                  "scheme" : "http://schemas.google.com/g/2005#kind",
+                  "term" : "http://schemas.google.com/g/2005#event"
+               }
+            ],
+            "link" : [
+               {
+                  "rel" : "alternate",
+                  "href" : "http://www.google.com/calendar/event?eid=ODRycmsxb2swaDVrcjFvNnU1Ymtmcmw0Y28gZGV2ZWxvcGVyLWNhbGVuZGFyQGdvb2dsZS5jb20",
+                  "title" : "alternate",
+                  "type" : "text/html"
+               },
+               {
+                  "rel" : "self",
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/84rrk1ok0h5kr1o6u5bkfrl4co",
+                  "type" : "application/atom+xml"
+               }
+            ],
+            "gCal_guestsCanSeeGuests" : {
+               "value" : "true"
+            },
+            "gd_when" : [
+               {
+                  "endTime" : "2010-10-09T17:45:00.000-07:00",
+                  "startTime" : "2010-10-09T09:45:00.000-07:00"
+               }
+            ],
+            "gd_transparency" : {
+               "value" : "http://schemas.google.com/g/2005#event.opaque"
+            },
+            "published" : {
+               "value" : "2010-10-02T05:39:36.000Z"
+            },
+            "gCal_anyoneCanAddSelf" : {
+               "value" : "false"
+            },
+            "title" : {
+               "value" : "Silicon Valley CodeCamp",
+               "type" : "text"
+            }
+         },
+         {
+            "gCal_guestsCanModify" : {
+               "value" : "false"
+            },
+            "gCal_guestsCanInviteOthers" : {
+               "value" : "true"
+            },
+            "gd_who" : [
+               {
+                  "rel" : "http://schemas.google.com/g/2005#event.organizer",
+                  "email" : "developer-calendar@google.com",
+                  "valueString" : "developer-calendar@google.com"
+               }
+            ],
+            "gd_comments" : {
+               "gd_feedLink" : {
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/lfed4fu11c7so5ova45iobjd6c/comments"
+               }
+            },
+            "content" : {
+               "value" : "June 21-24, 2011 http://cot.ag/9P93uE",
+               "type" : "text"
+            },
+            "gd_where" : [
+               {
+                  "valueString" : "Portland OR"
+               }
+            ],
+            "author" : [
+               {
+                  "email" : {
+                     "value" : "developer-calendar@google.com"
+                  },
+                  "name" : {
+                     "value" : "Google Developer Calendar"
+                  }
+               }
+            ],
+            "gCal_uid" : {
+               "value" : "lfed4fu11c7so5ova45iobjd6c@google.com"
+            },
+            "gd_eventStatus" : {
+               "value" : "http://schemas.google.com/g/2005#event.confirmed"
+            },
+            "gCal_sequence" : {
+               "value" : 0
+            },
+            "id" : {
+               "value" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/lfed4fu11c7so5ova45iobjd6c"
+            },
+            "updated" : {
+               "value" : "2010-10-13T06:31:29.000Z"
+            },
+            "category" : [
+               {
+                  "scheme" : "http://schemas.google.com/g/2005#kind",
+                  "term" : "http://schemas.google.com/g/2005#event"
+               }
+            ],
+            "link" : [
+               {
+                  "rel" : "alternate",
+                  "href" : "http://www.google.com/calendar/event?eid=bGZlZDRmdTExYzdzbzVvdmE0NWlvYmpkNmMgZGV2ZWxvcGVyLWNhbGVuZGFyQGdvb2dsZS5jb20",
+                  "title" : "alternate",
+                  "type" : "text/html"
+               },
+               {
+                  "rel" : "self",
+                  "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/lfed4fu11c7so5ova45iobjd6c",
+                  "type" : "application/atom+xml"
+               }
+            ],
+            "gCal_guestsCanSeeGuests" : {
+               "value" : "true"
+            },
+            "gd_when" : [
+               {
+                  "endTime" : "2011-06-25",
+                  "startTime" : "2011-06-21"
+               }
+            ],
+            "gd_transparency" : {
+               "value" : "http://schemas.google.com/g/2005#event.transparent"
+            },
+            "published" : {
+               "value" : "2010-10-10T17:16:53.000Z"
+            },
+            "gCal_anyoneCanAddSelf" : {
+               "value" : "false"
+            },
+            "title" : {
+               "value" : "Open Source Bridge",
+               "type" : "text"
+            }
+         }
+      ],
+      "xmlns_openSearch" : "http://a9.com/-/spec/opensearchrss/1.0/",
+      "gCal_timezone" : {
+         "value" : "America/Los_Angeles"
+      },
+      "author" : [
+         {
+            "email" : {
+               "value" : "developer-calendar@google.com"
+            },
+            "name" : {
+               "value" : "Google Developer Calendar"
+            }
+         }
+      ],
+      "generator" : {
+         "version" : "1.0",
+         "value" : "Google Calendar",
+         "uri" : "http://www.google.com/calendar"
+      },
+      "gCal_timesCleaned" : {
+         "value" : 0
+      },
+      "xmlns_gd" : "http://schemas.google.com/g/2005",
+      "openSearch_itemsPerPage" : {
+         "value" : 25
+      },
+      "id" : {
+         "value" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full"
+      },
+      "updated" : {
+         "value" : "2010-10-22T17:29:50.000Z"
+      },
+      "category" : [
+         {
+            "scheme" : "http://schemas.google.com/g/2005#kind",
+            "term" : "http://schemas.google.com/g/2005#event"
+         }
+      ],
+      "link" : [
+         {
+            "rel" : "alternate",
+            "href" : "http://www.google.com/calendar/embed?src=developer-calendar@google.com",
+            "type" : "text/html"
+         },
+         {
+            "rel" : "http://schemas.google.com/g/2005#feed",
+            "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full",
+            "type" : "application/atom+xml"
+         },
+         {
+            "rel" : "http://schemas.google.com/g/2005#batch",
+            "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full/batch",
+            "type" : "application/atom+xml"
+         },
+         {
+            "rel" : "self",
+            "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full?alt=json&max-results=25",
+            "type" : "application/atom+xml"
+         },
+         {
+            "rel" : "next",
+            "href" : "http://www.google.com/calendar/feeds/developer-calendar%40google.com/public/full?alt=json&start-index=26&max-results=25",
+            "type" : "application/atom+xml"
+         }
+      ],
+      "openSearch_totalResults" : {
+         "value" : 443
+      },
+      "xmlns_gCal" : "http://schemas.google.com/gCal/2005",
+      "subtitle" : {
+         "value" : "The calendar contains information about upcoming developer conferences at which Google will be speaking, along with other developer-related events.",
+         "type" : "text"
+      },
+      "title" : {
+         "value" : "Official Google External Developer Events",
+         "type" : "text"
+      }
+   },
+   "version" : "1.0",
+   "encoding" : "UTF-8"
+}

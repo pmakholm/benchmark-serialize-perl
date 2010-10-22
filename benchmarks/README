@@ -1,0 +1,16 @@
+Standard benchmark structures
+=============================
+
+This directory contains a couple of standard benchamark structures for use
+with Benchmark::Serialize. All benchmarks can be run with the 'run.pl'
+script with a subdirectory name as argument.
+
+  small           - Just a very simple hash
+  jvm-serializers - Taken from http://github.com/eishay/jvm-serializers
+  google-data     - http://www.google.com/calendar/feeds/developer-calendar@google.com/public/full?alt=json
+
+Each subdirectory contains a 'structure.pl' containing the structure, possibly
+a 'structure.proto' for use with Google::ProtocolBufferes, and possibly a
+'StructureXS' module made with protobuf-perlxs.
+
+

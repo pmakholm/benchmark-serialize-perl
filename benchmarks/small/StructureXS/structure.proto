@@ -1,0 +1,3 @@
+message StructureXS {
+  required int32 a = 1;
+}

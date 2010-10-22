@@ -1,0 +1,106 @@
+message Structure {
+    required Feed   feed     = 1;
+    required string version  = 2;
+    required string encoding = 3;
+
+    message Feed {
+        required string xmlns            = 1;
+        optional string xmlns_gCal       = 2;
+        optional string xmlns_gd         = 3;
+        optional string xmlns_openSearch = 4;
+
+        required Generator generator = 5;
+        required Value id            = 6;
+        required Value updated       = 7;
+        required Value title         = 8;
+        required Value subtitle      = 9;
+
+        repeated Author author       = 10;
+        repeated Category category   = 11;
+
+        repeated Link link   = 12;
+        repeated Entry entry = 13;
+
+        optional Value gCal_timesCleaned = 14;
+        optional Value gCal_timezone     = 15;
+
+        optional Value openSearch_itemsPerPage = 16;
+        optional Value openSearch_startIndex   = 17;
+        optional Value openSearch_totalResults = 18;
+    }
+
+    message Entry {
+        repeated Author author     = 1;
+        repeated Category category = 2;
+        required Value id          = 3;
+        required Value updated     = 4;
+        
+        required Value content     = 5;
+        repeated Link link         = 6;
+        
+        required Value title       = 7;
+        required Value published   = 8;
+
+        optional Value gCal_anyoneCanAddSelf      = 9;
+        optional Value gCal_guestsCanInviteOthers = 10;
+        optional Value gCal_guestsCanModify       = 11;
+        optional Value gCal_guestsCanSeeGuests    = 12;
+        optional Value gCal_sequence              = 13;
+        optional Value gCal_uid                   = 14;
+
+        optional Value gd_eventStatus  = 15;
+        optional Value gd_transparency = 16;
+        repeated ValueStr gd_where     = 17;
+        repeated When gd_when          = 18;
+        repeated Who  gd_who           = 19;
+        optional Comments gd_comments  = 20;
+    }
+
+    message Generator {
+        required string uri = 1;
+        required string value = 2;
+        required string version = 3;
+    }
+
+    message Author {
+        required Value email = 1;
+        required Value name  = 2;
+    }
+
+    message Category {
+        required string scheme = 1;
+        required string term   = 2;
+    }
+
+    message Value {
+        required string value = 1;
+        optional string type  = 2;
+    }
+
+    message ValueStr {
+        required string valueString = 1;
+    }
+
+    message When {
+        required string startTime = 1;
+        required string endTime   = 2;
+    } 
+ 
+    message Who {
+        required string email = 1;
+        optional string rel   = 2;
+        optional string valueString = 3;
+        optional Value gd_attendeeStatus = 4;
+    } 
+ 
+    message Comments {
+        required Link gd_feedLink = 1;
+    }
+
+    message Link {
+        required string href = 1;
+        optional string rel  = 2;
+        optional string type = 3;
+        optional string title = 4;
+    }
+}
