@@ -71,7 +71,7 @@ sub register {
     } elsif ( ref $proto eq "SCALAR" ) {
         $class ||= Google::ProtocolBuffers->parse($proto);
     } else {
-        $class ||= Google::ProtocolBuffers->parse_file($proto);
+        $class ||= (Google::ProtocolBuffers->parsefile($proto))[-1];
     }
 
     Benchmark::Serialize::Library->register(
@@ -97,7 +97,7 @@ sub create {
     my $field = 1;
     for my $key (keys %$obj) {
         my $value = $obj->{$key};
-	my $label = LABEL_REQUIRED;        
+	my $label = LABEL_OPTIONAL;        
 
 	if ( ref $value eq "ARRAY" ) {
             $label = LABEL_REPEATED;
