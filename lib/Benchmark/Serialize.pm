@@ -34,6 +34,11 @@ for serializing data. Note that using this module is only a part of chosing a
 serialization format. Other factors than the benchmarked might be of
 relevance!
 
+Included is support for 24 different serialization modules. Also supported
+is the Data::Serializer wrapper providing a unified interface for
+serialization and some extra features. Benchmarking of specialized modules
+made with Protocol Buffers for Perl/XS (protobuf-perlxs) is also available.
+
 =head2 Functions
 
 This module provides the following functions
