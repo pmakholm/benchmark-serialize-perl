@@ -7,6 +7,7 @@ use Getopt::Long;
 use Benchmark::Serialize qw( cmpthese );
 
 use Benchmark::Serialize::Library::ProtocolBuffers;
+use Benchmark::Serialize::Library::ProtocolBuffers::XS;
 use Benchmark::Serialize::Library::Data::Serializer;
 
 my @benchmark          = ();      # package names of benchmarks to run
@@ -34,6 +35,7 @@ Getopt::Long::GetOptions(
         $structure = YAML::LoadFile( $_[1] );
     },
     'ds|data-serializer=s'  => sub { Benchmark::Serialize::Library::Data::Serializer->register($_[1]) }, 
+    'pbx=s'                 => sub { Benchmark::Serialize::Library::ProtocolBuffers::XS->register($_[1]) }, 
     'pb|protocol-buffers:s' => \$protocolbuffers,
     'e|eval=s'       => sub {
         $structure = eval $_[1];
