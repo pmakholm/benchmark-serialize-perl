@@ -1,0 +1,5 @@
+The data in this benchmark comes from Google's developer calender feed.
+
+Originaly retrieved as JSON with a few conversions done afterwards. First all
+keys named "$t" is renamed to "text" and then all remaining "$" characters in
+key names is converted to a "_" character. 
