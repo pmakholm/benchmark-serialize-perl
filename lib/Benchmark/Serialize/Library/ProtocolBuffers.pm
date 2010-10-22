@@ -69,9 +69,11 @@ sub register {
     if ( ref $proto eq "HASH" ) {
         $class   = create( $proto );
     } elsif ( ref $proto eq "SCALAR" ) {
-        $class ||= Google::ProtocolBuffers->parse($proto);
+        my @classes = sort Google::ProtocolBuffers->parse($proto);
+        $class ||= $classes[0];
     } else {
-        $class ||= (Google::ProtocolBuffers->parsefile($proto))[-1];
+        my @classes = sort Google::ProtocolBuffers->parsefile($proto);
+        $class ||= $classes[0];
     }
 
     Benchmark::Serialize::Library->register(
