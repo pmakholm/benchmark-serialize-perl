@@ -22,6 +22,7 @@ Getopt::Long::GetOptions(
     'i|iterations=i' => \$iterations,
     'deflate!'       => \$Benchmark::Serialize::benchmark_deflate,
     'inflate!'       => \$Benchmark::Serialize::benchmark_inflate,
+    'roundtrip!'     => \$Benchmark::Serialize::benchmark_roundtrip,
     'o|output=s'     => \$Benchmark::Serialize::output,
     'v|verbose!'     => \$Benchmark::Serialize::verbose,
 ) or exit 1;

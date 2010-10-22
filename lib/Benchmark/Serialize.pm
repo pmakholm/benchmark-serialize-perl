@@ -91,6 +91,7 @@ our %EXPORT_TAGS = ( all => \@EXPORT_OK );
 
 our $benchmark_deflate  = 1;       # boolean
 our $benchmark_inflate  = 1;       # boolean
+our $benchmark_roundtrip= 1;       # boolean
 our $benchmark_size     = 1;       # boolean
 our $verbose            = 1;       # boolean
 our $output             = 'chart'; # chart or list
@@ -131,6 +132,9 @@ sub cmpthese {
         $results->{inflate}->{$name} = timeit_inflate( $iterations, $structure, $benchmark )
             if $benchmark_inflate;
 
+        $results->{roundtrip}->{$name} = timeit_roundtrip( $iterations, $structure, $benchmark )
+            if $benchmark_roundtrip;
+
         $results->{size}->{$name}    = length( $deflated );
     }
 
@@ -142,6 +146,9 @@ sub cmpthese {
 
     output( 'Inflate (serialized -> perl)', "time", $output, $results->{inflate}, $width )
         if $benchmark_inflate;
+
+    output( 'Roundtrip', "time", $output, $results->{roundtrip}, $width )
+        if $benchmark_roundtrip;
 }
 
 sub output {
@@ -258,6 +265,11 @@ sub timeit_inflate {
     my ( $iterations, $structure, $benchmark ) = @_;
     my $deflated = $benchmark->deflate($structure);
     return Benchmark::timethis( $iterations, sub { $benchmark->inflate($deflated) }, '', 'none' );
+}
+
+sub timeit_roundtrip {
+    my ( $iterations, $structure, $benchmark ) = @_;
+    return Benchmark::timethis( $iterations, sub { $benchmark->inflate( $benchmark->deflate( $structure )) }, '', 'none' );
 }
 
 sub width {
