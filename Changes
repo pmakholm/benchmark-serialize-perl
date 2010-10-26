@@ -1,5 +1,12 @@
 Changes for Benchmark::Serialize
 
+0.08 - Tue Oct 26 17:20:46 2010
+	* Moved benchmark definitions into Benchmark::Serialize::Library
+	* Added native benchmarks for AnyMongo::BSON and JSYNC
+	* Added benchmark generators for Data::Serializer
+	* Added benchmark generators for two ProtocolBuffer implementations
+	* Improved testing for "correctness" of serialization
+
 0.07 - Thu Sep  9 09:24:53 2010
 	Added benchmark for Data::MessagePack
 	Improved handling of failing benchmarks
