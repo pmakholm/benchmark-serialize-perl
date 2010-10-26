@@ -98,7 +98,7 @@ our $benchmark_deflate  = 1;       # boolean
 our $benchmark_inflate  = 1;       # boolean
 our $benchmark_roundtrip= 1;       # boolean
 our $benchmark_size     = 1;       # boolean
-our $verbose            = 1;       # boolean
+our $verbose            = 0;       # boolean
 our $output             = 'chart'; # chart or list
 
 sub cmpthese {
