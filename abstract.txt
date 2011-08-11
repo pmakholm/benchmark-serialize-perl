@@ -1,0 +1,8 @@
+So you need to serialize some data? Let me count the ways to skin that camel
+(LMCTWTSTC)!
+
+Somewhere between 25 and 50 modules on CPAN just doing that. Why are there so
+many? Which one is the right one for you? How can you decide which one to use?
+Is there a One True Serialization Module? 
+
+For more questions please attend this lightning talk.
